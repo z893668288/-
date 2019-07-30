@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>拼图</title>
+	</head>
+	<style type="text/css">
+		html,body,ul{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		.box1{
+			position: absolute;
+			display: flex;
+			list-style:none;
+			max-width: 400px;
+			min-width: 200px;
+			/*max-height: 700px;*/
+			flex-flow: column;
+			overflow: auto;
+			border: 1px soli2d red;
+			right: 0px;
+		}
+		li{
+			width: 300px;
+			height: 168px;
+			/*margin-top: 1px;*/
+		}
+		li img{
+			width: 300px;
+			display: block;
+			height: 168px;
+		}
+		.box2{
+			width: 1200px;
+			height: 676px;
+			border: 2px soli2d #C8C8C8;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			background: url(img/埃菲尔铁塔原图.gif);
+			background-size:1200px ;
+		}
+		.box2 li{
+			float: left;
+			
+		}
+	</style>
+	<body>
+		<ul class="box1">
+			<li draggable="true"><img src="img/1.gif"/></li>
+			<li draggable="true"><img src="img/2.gif"/></li>
+			<li draggable="true"><img src="img/3.gif"/></li>
+			<li draggable="true"><img src="img/4.gif"/></li>
+			<li draggable="true"><img src="img/5.gif"/></li>
+			<li draggable="true"><img src="img/6.gif"/></li>
+			<li draggable="true"><img src="img/7.gif"/></li>
+			<li draggable="true"><img src="img/8.gif"/></li>
+			<li draggable="true"><img src="img/9.gif"/></li>
+			<li draggable="true"><img src="img/10.gif"/></li>
+			<li draggable="true"><img src="img/11.gif"/></li>
+			<li draggable="true"><img src="img/12.gif"/></li>
+			<li draggable="true"><img src="img/13.gif"/></li>
+			<li draggable="true"><img src="img/14.gif"/></li>
+			<li draggable="true"><img src="img/15.gif"/></li>
+			<li draggable="true"><img src="img/16.gif"/></li>
+		</ul>
+		<ul class="box2">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+</html>
+<script type="text/javascript">
+	var box2 = document.querySelector(".box2")
+	var oli2 = document.querySelectorAll(".box2 li");
+	var box1 = document.querySelector(".box1");
+	var oli1 = document.querySelectorAll(".box1 li");
+	//拼图框内的背景色间隔判断
+	for(var i = 0; i < oli2.length; i++) {
+		if(i < 4 && i % 2 == 1 || i >=8 && i % 2 == 1 && i < 12) {
+			oli2[i].style.background = "rgba(222,222,222,.4)";
+		}else if(i < 8 && i % 2 != 1 && i >= 4) {
+			oli2[i].style.background = "rgba(222,222,222,.4)";
+		}else if(i >= 12 && i % 2 !==1 ){
+			oli2[i].style.background = "rgba(222,222,222,.4)";
+		}
+	}
+	console.log(oli2[this.index])
+	//拼图拖拽开始
+	for(var j = 0; j < oli1.length; j++) {
+		oli1[j].index = j;
+		oli1[j].ondragstart = function() {
+			this.ondrag = function() {//拖拽过程
+				
+			}
+			this.ondragend = function(ev) {//拖拽结束
+				var ev = ev || window.event;
+				var ox = ev.pageX;
+				var oy = ev.pageY;
+//				for(var k = 0; k > oli2.length; k++) {
+//					console.log(k)
+					if(ox >= oli2[this.index].offsetLeft || oy >= oli2[this.index].offsetTop) {
+						oli2[this.index].appendChild(oli1[this.index]);
+						console.log(oli2[this.index])
+					}else {
+						alert("好好想想到底放哪呢？嘻嘻！")
+					}
+//				}
+			}
+		}
+	}
+	//目标元素的拖拽事件
+//	box2.ondragenter = function() {
+//		box2.ondragover = function(ev) {
+//			var ev = ev || window.event;
+//			ev.preventDefault();
+//		}
+//		box2.ondrop = function() {
+//			console.log(this);
+//		}
+//	}
+</script>

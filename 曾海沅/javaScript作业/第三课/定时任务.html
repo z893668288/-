@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>定时任务</title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	var i = 0;
+	var timeout = setTimeout(function() {
+		inter = setInterval(function() {
+			if(i < 10) {
+				console.log(i++);
+			}
+			else if(i = 10) {
+				clearInterval(inter);
+			}
+		},1000)
+	},5000);
+	
+</script>

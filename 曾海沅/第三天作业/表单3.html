@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.box{
+			position: relative;
+			width:400px;
+			height: 500px;
+			background-color: white;
+			border: 2px solid lightgray;
+			margin: 0px auto;
+		}
+		.a1{
+			position: absolute;
+			top: 35px;
+			left: 45px;
+			font-size: 17px;
+			font-weight:700;
+				
+		}
+		.a2{
+			position: absolute;
+			top:-6px;
+			left:85px;
+			width: 200px;
+			height: 25px;			
+		}
+		.a3{
+			position: absolute;
+			top: 75px;
+			left: 45px;
+			font-size: 17px;
+			font-weight:700;
+				
+		}
+		.a4{
+			position: absolute;
+			top:-5px;
+			left:85px;
+			width: 200px;
+			height: 25px;			
+		}
+		.a5 {
+			position: absolute;
+			top: 115px;
+			left: 45px;
+			font-size: 17px;
+			font-weight:700;				
+		}
+		.a6{
+			position: absolute;
+			top:-5px;
+			left:85px;
+			width: 200px;
+			height: 25px;			
+		}
+		.a7{
+			position: absolute;
+			top: 160px;
+			left: 81px;
+			font-size: 17px;
+			font-weight:700;	
+		}
+		.k1{
+			position: absolute;
+			top:160px;
+			left:130px;				
+		}
+		.k2{
+			position: absolute;
+			top:160px;
+			left:180px;
+		}
+		.k3{
+			position: absolute;
+			top:190px;
+			left:83px;
+			font-weight:700;	
+		}
+		.form-input1{
+			position: absolute;
+			top:188px;
+			left:135px;			
+		}
+		.p1{
+			position: absolute;
+			top:192px;
+			left:210px;
+			font-size: 12px;
+		}
+		.form-input2{
+			position: absolute;
+			top:188px;
+			left:228px;			
+		}
+		.p2{
+			position: absolute;
+			top:192px;
+			left:272px;
+			font-size: 12px;
+		}
+		.form-input3{
+			position: absolute;
+			top:188px;
+			left:288px;			
+		}
+		.p3{
+			position: absolute;
+			top:192px;
+			left:333px;
+			font-size:12px;
+		}
+		.p4{
+			position: absolute;
+			top:215px;
+			left:137px;
+			font-size:11.5px;
+			color:blue;			
+		}
+		.p5{
+			position: absolute;
+			top:240px;
+			left:66px;
+			font-weight:700;
+		}
+		.form-input4{
+			position: absolute;
+			top:238px;
+			left:135px;
+		}
+		.p6{
+			position: absolute;
+			top:242px;
+			left:233px;
+			font-size:11.5px;		
+		}
+		.h2{
+			position: absolute;
+			top:280px;
+			left:130px;	
+			width: 120px;		
+		}
+		.p7{
+			position: absolute;
+			top:300px;
+			left:290px;
+			font-size:12px;
+			color:blue;		
+		}
+		.d1{
+			position: absolute;
+			top:350px;
+			left:66px;
+			font-weight:700;
+		}
+		.d2{
+			position: absolute;
+			top:-5px;
+			left:70px;
+			width: 120px;
+			height: 25px;
+		}
+		.d3{
+			position: absolute;
+			width:165px;
+			height: 45px;
+			background-color: #67A54B;
+			color:white;
+			font-size:23px;
+			top:385px;
+			left: 134px;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+			border: none;
+			border-right:1px solid transparent;
+		}
+		.d5{
+			width: 0px;
+            height: 0px;
+			border-width: 23px;
+			border-style: solid;
+			border-color:  transparent   transparent   transparent  #67A54B;
+			position: absolute;
+			top:384.49px;
+			left:299px;
+/*			border: 0px;*/
+		}																		
+	</style>
+	<body>
+		<div class="box">
+			<label class="a1">电子邮箱:<input class="a2" type="text"  /></label>			
+			<label class="a3">设置密码:<input class="a4" type="text"  /></label>
+		    <label class="a5">真实姓名:<input class="a6" type="text"  /></label>
+			<label for="email" class="a7">性别:</label>
+			<label class="k1"><input type="radio"  name="sex"/>男</label>
+		    <label class="k2"><input type="radio"  name="sex"/>女</label>
+		    <label class="k3">生日:</label>
+		    <select class="form-input1">
+		    	<option>请选择</option>		   
+		    <select>
+		    <label class="p1">年</label>
+		   	<select class="form-input2">
+		    	<option>--</option>
+		    <select>
+		    <label class="p2">月</label>	
+		    <select class="form-input3">
+		    	<option>--</option>
+		    <select>
+		    <label class="p3">日</label>	
+		    <label class="p4">为什么要填写我的生日？</label>
+		    <label class="p5">我现在:</label>
+		    <select class="form-input4">
+		    	<option>请选择身份</option>		   
+		    <select>		   
+		    <img class="h2" src="../img/验证码.jpg" />
+		    <span class="p7">看不清换一张？</span>
+		    <label class="d1">验证码:<input class="d2" type="text"  /></label>
+            <input class="d3" type="submit" value="立即注册"  /></label>
+            <label class="d5">
+		    </select>		    	
+		</div>
+	</body>
+</html>

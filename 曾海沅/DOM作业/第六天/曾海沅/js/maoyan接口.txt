@@ -1,0 +1,6 @@
+https://www.easy-mock.com/mock/5ba06ec82ee5a7654dc13dd7/example/movieInfo		正在热映
+https://www.easy-mock.com/mock/5ba06ec82ee5a7654dc13dd7/example/maoyanExpect		即将上映期待
+https://www.easy-mock.com/mock/5ba06ec82ee5a7654dc13dd7/example/maoyancommingsoon	即将上映
+
+
+https://www.easy-mock.com/mock/5ba06ec82ee5a7654dc13dd7/example/watsons	屈臣氏接口地址

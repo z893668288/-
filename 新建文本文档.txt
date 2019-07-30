@@ -1,0 +1,103 @@
+1.用匿名函数赋值给一个变量，在同一个script代码块中，如果函数调用放到匿名函数赋值给变量之前，那么打印出来的结果是undefined,因为在调用过程有一个预解析的状态，在当前调用的位置，var声明的变量还未被赋值，所以结果是undefined
+
+2.直接定义function，在预解析过程中会直接将函数定义好，所以在同一个代码块中，放到函数之前可以调用。
+
+
+//concat() 连接两个或更多的数组，并返回结果。
+	console.log("=========================== concat ===========================");
+	var arr1 = [1, 2, 3, 4];
+	var arr2 = ["a", "b"];
+	// 将arr1和arr2进行拼接
+	var result = arr1.concat(arr2);
+	console.log(result);
+	// 给result数组继续添加元素(添加的元素为1-N个，可以为元素也可以为数组)
+	result = result.concat("A", "B", "C", [11, 22, 33]);
+	console.log(result);
+</script>
+
+<script type="text/javascript">
+	//join() 把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。
+	console.log("=========================== join ===========================");
+	// 创建一个长度为3的数组
+	var arr3 = new Array(3);
+	// 通过数组的下标，给数组的元素赋值
+	arr3[0] = "a";
+	arr3[1] = "b";
+	arr3[2] = "c";
+	var result = arr3.join("|");
+	console.log(result);
+</script>
+
+<script type="text/javascript">
+	//pop 删除并返回数组的最后一个元素
+	console.log("=========================== pop ===========================");
+	var arr4 = ["A", "B", "C", "D", "E"];
+	var result = arr4.pop();
+	console.log(result);
+	console.log(arr4);
+</script>
+
+<script type="text/javascript">
+	//push() 向数组的末尾添加一个或更多元素，并返回新的长度
+	console.log("=========================== push ===========================");
+	var arr5 = new Array();
+	console.log(arr5.length);
+	var len = arr5.push("a");
+	console.log(len);
+	console.log(arr5);
+</script>
+
+<script type="text/javascript">
+	//reverse() 颠倒数组中元素的顺序
+	console.log("=========================== reverse ===========================");
+	var arr6 = ["A", "B", "C", "D", "E"];
+	arr6 = arr6.reverse();
+	console.log(arr6);
+</script>
+
+
+<script type="text/javascript">
+	//slice() 从某个已有的数组返回选定的元素
+	console.log("=========================== slice ===========================");
+	var arr7 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+	console.log(arr7.slice(1));  // 从下标1开始截取数组
+	console.log(arr7.slice(1,3));  // 从下标1开始截取到下标3(不包括下标3)
+	console.log(arr7.slice(-1));  // 从右至左截取
+	console.log(arr7.slice(-3, -1));  // 截取倒数第三个元素到倒数第一个元素的内容
+</script>
+
+
+<script type="text/javascript">
+	//sort() 对数组的元素进行排序
+	console.log("=========================== sort ===========================");
+	var arr8 = ["d", "g", "f", "c", "a", "b", "e"];
+	/*
+	 * 字符串的排序规则
+	 * 		字符串中的每个字符都拥有属于自己的ASCII码值
+	 */
+	var result = arr8.sort();
+	console.log(result);
+	
+	var arr9 = [3, 4, 12, 9, 8, 7, 2, 1, 5, 6];
+	result = arr9.sort(function(a, b) {
+		return a - b;
+	});
+	console.log(result);
+</script>
+
+<script type="text/javascript">
+	//splice() 删除元素，并向数组添加新元素。
+	console.log("=========================== splice ===========================")
+	/*
+	 index 必须是整数，规定添加/删除项目的位置，使用负数可以从数组结尾处规定位置。
+	 howmany 要删除的项目数量，如果设置为0，则不会删除项目
+	 item1,...itemX
+	 语法：arrayObject.splice(index,howmany,item1,...,itemX)*/
+	var arr10 = [1,2,3,4,5,6,7,8];
+	result = arr10.splice(0,1,10);
+	console.log(result);//打印删除的部分，选择的下标是0，那么删除第一个打印结果是1
+	console.log(arr10);//打印替换之后的结果，下标为0的数被替换。
+	
+	var arr11 = [1,2,3,4,5,6,7];
+	arr11.splice(1,3,21,33)
+	console.log(arr11);//删除项目是3，那么在选定位置往后3个数删除，再把添加的内容打印出来

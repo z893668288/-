@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>屈臣氏</title>
+		<link rel="stylesheet" type="text/css" href="incofont/iconfont.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/ajax.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		html,
+		body {
+			margin: 0px;
+			padding: 0px;
+			width: (document.body.clientWidth > 750 ? "750px": "auto");
+			width: (document.body.clientWidth < 250 ? "250px": "auto");
+			background: #FFEDE3;
+		}
+		/*最大容器*/
+		
+		.bigBox {
+			width: 100%;
+			max-width: 750px;
+			margin: auto;
+			overflow: hidden;
+			margin: auto;
+		}
+		
+		.topBox1 {
+			display: flex;
+			width: 100%;
+			max-width: 750px;
+			height: 41px;
+			border-bottom: 1px solid #EEEEEE;
+			position: fixed;
+			background: white;
+		}
+		
+		.topLeft {
+			width: 41px;
+			height: 41px;
+		}
+		
+		.topLeft i {
+			padding: 10px;
+			text-align: center;
+			line-height: 41px;
+			font-size: 20px;
+			color: #787878;
+		}
+		
+		.topCenter {
+			width: 100%;
+			max-width: 670px;
+			display: flex;
+		}
+		
+		.topCenter i {
+			margin-left: 15px;
+			border: 1px solid #EEEEEE;
+			display: inline-block;
+			height: 34px;
+			margin-top: 2px;
+			padding-left: 15px;
+			line-height: 34px;
+			border-radius: 50% 0 0 50%;
+			border-right: 0px;
+		}
+		
+		.topCenter input {
+			display: flex;
+			height: 32px;
+			width: 100%;
+			max-width: 450px;
+			margin-top: 2px;
+			flex: 1 1 120px;
+			border: 1px solid #EEEEEE;
+			outline: none;
+			border-left: 0px;
+			border-right: 0px;
+		}
+		
+		.topCenter span {
+			border: 1px solid #EEEEEE;
+			display: inline-block;
+			height: 34px;
+			width: 22px;
+			padding-right: 10px;
+			margin-top: 2px;
+			border-radius: 0 50% 50% 0;
+			border-left: 0px;
+		}
+		
+		.topright {
+			width: 41px;
+			height: 41px;
+		}
+		
+		.topright i {
+			padding: 10px;
+			text-align: center;
+			line-height: 41px;
+			font-size: 20px;
+			color: #787878;
+		}
+		
+		.topBox2 {
+			width: 100%;
+			max-width: 750px;
+			height: 40px;
+			display: flex;
+			justify-content: space-around;
+			flex: 1 1 280px;
+			position: fixed;
+			top: 42px;
+			background: white;
+		}
+		
+		.topBox2 div {
+			width: 25%;
+			line-height: 40px;
+			text-align: center;
+			font-size: 15px;
+			color: #525252;
+			font-family: "微软雅黑";
+		}
+		
+		.topBox2 div:nth-child(1) {
+			margin-left: 10px;
+		}
+		
+		.topBox2 div:nth-child(4) {
+			margin-right: 10px;
+		}
+		
+		ul {
+			display: flex;
+			list-style: none;
+			padding: 0px;
+			margin: 0px;
+			left: 0px;
+			right: 0px;
+			top: 34px;
+			flex-flow: wrap;
+		}
+		
+		ul li:nth-child(1) {
+			left: 0px;
+			right: 0px;
+			top: 32px;
+		}
+		
+		ul li:nth-child(1) img {
+			width: 100%;
+			display: block;
+		}
+		
+		#loop li {
+			margin:3px 0px 0px 3px ;
+			width: 32%;
+		/*	position: relative;*/
+		}
+		
+		#loop li img {
+			width: 100%;
+		}
+		
+		#loop li .product {
+			color: #909090;
+			font-size: 10px;
+			width: 100%;
+			background: white;
+			height: 210px;
+			display: block;
+			
+		}
+		
+		.price {
+			display: inline-block;
+			font-size: 16px;
+			background: white;
+			color: red;
+			padding: 4px 0px;
+			line-height: 30px;
+			
+		}
+		.kuan{
+			width: 100%;
+			height: 6px;
+		}
+		.delete {
+			display: inline-block;
+			font-size: 12px;
+			color: #999999;
+			text-decoration: line-through;
+			padding: 4px 0px;
+		}
+		
+		.gouwuche {
+			font-size: 13px;
+			color: white;
+			background: #FF4449;
+			margin-left: 3px;
+			padding: 5px;
+			border-radius: 50%;
+		}
+	</style>
+
+	<body>
+		<div class="bigBox">
+			<div class="topBox1">
+				<div class="topLeft">
+					<i class="iconfont icon-wo"></i>
+				</div>
+				<div class="topCenter">
+					<i class="iconfont icon-fangdajing"></i>
+					<input type="text" name="" id="text1" value="防晒" />
+					<span></span>
+				</div>
+				<div class="topright">
+					<i class="iconfont icon-gouwu gouwu"></i>
+				</div>
+			</div>
+			<div class="topBox2">
+				<!--两侧有小缝隙，第一个和最后用左右padding-->
+				<div>今日推荐</div>
+				<div>面膜中心</div>
+				<div>潮流好物</div>
+				<div>购全球</div>
+			</div>
+		
+			<ul>
+				<li><img src="img/banner.jpg" /><img src="img/必抢单.jpg" /></li>
+			</ul>
+			<ul id="loop">
+				<!--<li>
+					<img src="https://image.watsons.com.cn//upload/3ed0cef9.jpg" />
+					<span class="product">城野医生毛孔细致化妆水 100ml
+						<span class="price">￥89 <span class="delete">￥139</span><i class="iconfont icon-gouwu gouwu"></i></span>
+					</span>
+				</li>-->
+			</ul>
+		</div>
+	</body>
+
+</html>
+<script type="text/javascript">
+	window.onload = function() {
+		var tab = document.getElementsByClassName("topBox2")[0];
+		var loop = document.getElementById("loop");
+		var bigBox = document.getElementsByClassName("bigBox")[0];
+		tab.onclick = function() {
+			var target = event.target;
+			var children = this.children;
+			for(i = 0; i < children.length; i++) {
+				if(target == children[i]) {
+					children[i].style.cssText = "border-bottom: 2px solid #FF84A7;color: #FF84A7";
+					return;
+				} else {
+					children[i].style.cssText = "border-bottom: 0px;color: black;";
+
+				}
+			}
+		}
+		ajax("get", "https://www.easy-mock.com/mock/5ba06ec82ee5a7654dc13dd7/example/watsons", "", function(res) {
+			var films = JSON.parse(res);
+			var item = films.data.item_list;
+			for(var k = 0; k < item.length; k++) {
+				var each = item[k]; //每一条数据
+				var img = each.over_image_url;
+				var name1 = each.item_name;
+				var money1 = each.min_price;
+				 money1 = money1.substring(0, money1.length - 2);
+				var money2 = each.max_market_price;
+				if(money2 > 0) {
+					money2 = money2.toString();
+					money2 = money2.substring(0, money2.length-2 );
+				}else {
+					money2 = "";
+				}
+				var buy = each.globalReleased ? '<div class="btn red">购票</div>' : '<div class="btn blue">预售</div>';
+				loop.innerHTML += '<li><span class="product">'+'<img src="'+ img +'" >' + name1 + '<div class= "kuan"></div><span class="price">￥' + money1 + '<span class="delete">' + money2 +'</span><i class="iconfont icon-gouwu gouwuche"></i></span></li>';			
+			}
+		})
+
+	}
+</script>

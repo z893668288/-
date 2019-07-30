@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义滚动条</title>
+	</head>
+	<style type="text/css">
+		html { 
+		overflow-y: auto; 
+		
+		}
+		div {
+            width: 100%;
+            overflow-y: scroll;
+        }
+        div img{
+        	width: 60%;
+        	margin: 0 auto;
+        }
+		::-webkit-scrollbar {
+			width: 30px;
+			height: 30px;
+		}
+		::-webkit-scrollbar-track {
+        border-radius:10px;
+        }
+        ::-webkit-scrollbar-thumb {
+        border-radius:10px;
+        background:linear-gradient(180deg,red,orange,yellow,green,cyan,blue,violet)
+        }
+	</style>
+	<body>
+		<div id="div1">
+			<img src="img/1.jpg"/>
+			<img src="img/2.jpg"/>
+			<img src="img/3.jpg"/>
+			<img src="img/4.jpg"/>
+   		</div>
+	</body>
+</html>

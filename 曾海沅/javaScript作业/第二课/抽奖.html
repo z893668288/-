@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>抽奖</title>
+	</head>
+	<body>
+		<div>谢谢惠顾</div>
+		<div>特等奖</div>
+		<div>一等奖</div>
+		<div>二等奖</div>
+		<div>四等奖</div>
+		<div>五等奖</div>
+		<div>六等奖</div>
+		<div>七等奖</div>
+		<div>洗衣粉一包</div>
+		<input type="button" name="but" id="but" value="抽奖" />
+	</body>
+</html>
+<script type="text/javascript">
+	/*设置每十连抽，保底必得一包洗衣粉。*/
+	var but = document.getElementById("but");
+	var i = 1;
+	but.onclick = function() {
+		var oDiv = document.getElementsByTagName("div");
+		for(; ; ) {
+		var	index = parseInt(Math.random() * 9);
+			if(i % 10 == 0) {
+				index = 8;
+				i++;
+				break;
+			}
+			if(index != 8) {
+				i++;
+				break;
+			}
+		}	
+		console.log(oDiv[index].innerHTML);
+	}
+</script>

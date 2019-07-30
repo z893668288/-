@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>
+		<title></title>
+	</head>
+	<style type="text/css">
+		body {
+			background: #eee;
+		}	
+		canvas {
+			background: #fff;
+		}
+		.icon-bofang{
+			position: absolute;
+			color: #000000;
+			font-size: 40px;
+			top: 10px;
+			left: 820px;
+		}
+		.icon-zanting{
+			position: absolute;
+			color: #000000;
+			font-size: 38px;
+			top: 10px;
+			left: 820px;
+			display: none;
+		}
+		span{
+			position: absolute;
+			font-family: "楷体";
+			top: 20px;
+			left: 870px;
+		}
+	</style>
+	<body>
+		<audio autoplay="autoplay" src="mp3/大杉久美子 - ドラえもんのうた (哆啦A梦之歌) (TV Version).mp3">
+			当前浏览器不支持audio
+		</audio>
+		<i class="iconfont icon-bofang"></i><span>播放音乐</span>
+		<i class="iconfont icon-zanting"></i>
+		<canvas id="mycanvas" width="800" height="620"></canvas>
+	</body>
+</html>
+<script type="text/javascript">
+	var mycanvas = document.querySelector("canvas");
+	var mus = document.querySelector("audio"); 
+	var ctx = mycanvas.getContext("2d");
+	var icon = document.querySelectorAll("i");
+	icon[0].onclick = function() {
+		mus.src = "mp3/大杉久美子 - ドラえもんのうた (哆啦A梦之歌) (TV Version).mp3"
+		mus.play();
+		icon[1].style.display = "block";
+		icon[0].style.display = "none";
+	}
+	icon[1].onclick = function() {
+		mus.pause();
+		icon[1].style.display = "none"
+		icon[0].style.display = "block";
+	}
+	ctx.strokeStyle = "black";
+	//头部
+	ctx.beginPath();
+	ctx.lineWidth = 2;
+	var bg = ctx.createLinearGradient(0,0,mycanvas.offsetWidth,mycanvas.offsetHeight);
+	bg.addColorStop(0.1, "white");
+	bg.addColorStop(0.4, "#0EA9D7");
+	bg.addColorStop(0.2, "#69B0BC");
+	ctx.ellipse(200,97,85,76,0,0,360*Math.PI/180,true);
+	ctx.lineTo(240,157);
+	ctx.closePath();
+	ctx.fillStyle = bg;
+	ctx.stroke();
+	ctx.fill();
+	
+	//脸颊
+	ctx.beginPath();
+	ctx.fillStyle = "white";
+	ctx.ellipse(200,111,68,54,0,0,360*Math.PI/180,false);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+	
+	//左眼框
+	ctx.strokeStyle = "black";
+	ctx.fillStyle = "white";
+	ctx.beginPath();
+	ctx.ellipse(181, 60, 20, 18, 90 * Math.PI/180, 0, 2 * Math.PI);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+	
+	//左眼球
+	ctx.strokeStyle = "black";
+	ctx.fillStyle = "black";	
+	ctx.beginPath();
+	ctx.arc(190,60,3,0*Math.PI/180,360*Math.PI/180,false);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+	
+	//右眼眶
+	ctx.strokeStyle = "black";
+	ctx.fillStyle = "white";
+	ctx.beginPath();
+	ctx.ellipse(217, 60, 20, 18, 90 * Math.PI/180, 0, 2 * Math.PI);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+	
+	//右眼球
+	ctx.strokeStyle = "black";
+	ctx.fillStyle = "black";	
+	ctx.beginPath();
+	ctx.arc(207,60,3,0*Math.PI/180,360*Math.PI/180,false);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+	
+	//鼻子
+	ctx.strokeStyle = "black";
+	ctx.fillStyle = "#C92600";	
+	ctx.beginPath();
+	ctx.arc(199,81,8,0*Math.PI/180,360*Math.PI/180,false);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+	
+	//人中
+	ctx.strokeStyle = "black";
+	ctx.beginPath();
+	ctx.lineWidth = 2;
+	ctx.lineCap = "round";				
+	ctx.moveTo(199,90);
+	ctx.lineTo(199,140);
+	ctx.closePath();
+	ctx.stroke();
+
+	//嘴巴
+	ctx.beginPath();
+	ctx.moveTo(155,124);
+	ctx.lineWidth = 1;
+	ctx.quadraticCurveTo(200,159,245,124);
+	// ctx.bezierCurveTo(200,162,240,123);
+	ctx.stroke();
+	
+	//左胡子1
+	ctx.strokeStyle = "black";
+	ctx.beginPath();
+	ctx.lineWidth = 1;
+	ctx.lineCap = "round";			
+	ctx.moveTo(148,84);
+	ctx.lineTo(175,96);
+	ctx.closePath();
+	ctx.stroke();
+	
+	//左胡子2
+	ctx.strokeStyle = "black";
+	ctx.beginPath();
+	ctx.lineWidth = 1;
+	ctx.lineCap = "round";		
+	ctx.moveTo(143,102);
+	ctx.lineTo(175,102);
+	ctx.closePath();
+	ctx.stroke();
+	
+	//左胡子3
+	ctx.strokeStyle = "black";
+	ctx.beginPath();
+	ctx.lineWidth = 1;
+	ctx.lineCap = "round";	//线帽(round圆角)			
+	ctx.moveTo(145,120);	//移动到某个起点
+	ctx.lineTo(175,108);
+	ctx.closePath();//线条连接到某个点
+	ctx.stroke();
+	
+	//右胡子1
+	ctx.strokeStyle = "black";
+	ctx.beginPath();
+	ctx.lineWidth = 1;
+	ctx.lineCap = "round";			
+	ctx.moveTo(247,84);
+	ctx.lineTo(220,96);
+	ctx.closePath();
+	ctx.stroke();
+	
+	//右胡子2
+	ctx.strokeStyle = "black";
+	ctx.beginPath();
+	ctx.lineWidth = 1;
+	ctx.lineCap = "round";		
+	ctx.moveTo(253,102);
+	ctx.lineTo(220,102);
+	ctx.closePath();
+	ctx.stroke();
+	
+	//右胡子3
+	ctx.strokeStyle = "black";
+	ctx.beginPath();
+	ctx.lineWidth = 1;
+	ctx.lineCap = "round";	//线帽(round圆角)			
+	ctx.moveTo(255,119);	//移动到某个起点
+	ctx.lineTo(220,108);
+	ctx.closePath();//线条连接到某个点
+	ctx.stroke();
+	
+	//身体
+	var bg = ctx.createLinearGradient(0,0,mycanvas.offsetWidth,mycanvas.offsetHeight);
+	bg.addColorStop(0.2, "white");
+	bg.addColorStop(0.5, "#0EA9D7");
+	bg.addColorStop(0.3, "#087D90");
+	ctx.strokeStyle = "black";
+	ctx.fillStyle = bg;
+	ctx.beginPath();
+	ctx.lineWidth = 2;
+	ctx.lineCap = "round";
+	ctx.moveTo(137,160);
+	ctx.lineTo(111,184);
+	ctx.lineTo(128,203);
+	ctx.lineTo(140,190);
+	ctx.lineTo(140,255);
+	ctx.lineTo(197,255);
+	ctx.arc(202,253,5,150*Math.PI/180,30*Math.PI/180,false);
+	ctx.lineTo(260,255);
+	ctx.lineTo(260,190);
+	ctx.lineTo(275,205);
+	ctx.lineTo(293,187);
+	ctx.lineTo(263,160);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+	
+	//红圈
+	ctx.strokeStyle = "black";
+	ctx.fillStyle = "#A03000";
+	ctx.beginPath();	
+	ctx.lineWidth = 2;
+	ctx.moveTo(140,153);
+	ctx.lineTo(261,153);
+	ctx.arc(258,158,5,-100*Math.PI/180,90*Math.PI/180,false);
+	ctx.lineTo(145,163);
+	ctx.arc(142,158,5,100*Math.PI/180,-80*Math.PI/180,false);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+	
+	//肚子
+	ctx.strokeStyle = "black";
+	ctx.fillStyle = "white";	
+	ctx.beginPath();
+	ctx.lineWidth = 2;
+	ctx.moveTo(160,164);
+	ctx.arc(200,190,48,-150*Math.PI/180,327*Math.PI/180,true);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+
+	//口袋
+	ctx.strokeStyle = "black";
+	ctx.fillStyle = "white";	
+	ctx.beginPath();
+	ctx.lineWidth = 2;
+//	ctx.moveTo(160,164);
+	ctx.arc(200,189,38,-185*Math.PI/180,365*Math.PI/180,true);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+	
+	//铃铛
+	ctx.strokeStyle = "black";
+	ctx.fillStyle = "#DFDB00";	
+	ctx.beginPath();
+	ctx.arc(199,168,11,0*Math.PI/180,360*Math.PI/180,false);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+	
+	//铃铛2
+	ctx.strokeStyle = "black";
+	ctx.beginPath();
+	ctx.lineWidth = 0.6;
+	ctx.lineCap = "round";		
+	ctx.moveTo(189,162);
+	ctx.lineTo(208,162);
+	ctx.closePath();
+	ctx.stroke();
+	
+	//铃铛3
+	ctx.strokeStyle = "black";
+	ctx.beginPath();
+	ctx.lineWidth = 0.5;
+	ctx.lineCap = "round";		
+	ctx.moveTo(188,164.5);
+	ctx.lineTo(209,164.5);
+	ctx.closePath();
+	ctx.stroke();
+	
+	//铃铛4
+	ctx.strokeStyle = "black";
+	ctx.fillStyle = "black";	
+	ctx.beginPath();
+	ctx.arc(199,170,2.5,0*Math.PI/180,360*Math.PI/180,false);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+	
+	//铃铛5
+	ctx.strokeStyle = "black";
+	ctx.beginPath();
+	ctx.lineWidth = 0.5;
+	ctx.lineCap = "round";		
+	ctx.moveTo(199,170);
+	ctx.lineTo(199,180);
+	ctx.closePath();
+	ctx.stroke();
+	
+	//左手
+	ctx.strokeStyle = "black";
+	ctx.fillStyle = "white";	
+	ctx.beginPath();
+	ctx.lineWidth = 2;
+	ctx.arc(113,199,18.5,0*Math.PI/180,360*Math.PI/180,false);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+	
+	//右手
+	ctx.strokeStyle = "black";
+	ctx.fillStyle = "white";	
+	ctx.beginPath();
+	ctx.lineWidth = 2;
+	ctx.arc(286,199,18.5,0*Math.PI/180,360*Math.PI/180,false);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+	
+	//左腿
+	var bg = ctx.createLinearGradient(0,0,mycanvas.offsetWidth,mycanvas.offsetHeight);
+	bg.addColorStop(0.5, "white");
+	bg.addColorStop(0.4, "#F4F6F1");
+	bg.addColorStop(0.5, "#000");
+	ctx.strokeStyle = "black";
+	ctx.fillStyle = "white";
+	ctx.beginPath();	
+	ctx.lineWidth = 2;
+	ctx.moveTo(135,254);
+	ctx.lineTo(190,254);
+	ctx.arc(188,264,13,318*Math.PI/180,25*Math.PI/100,false);
+	ctx.lineTo(134,273);
+	ctx.quadraticCurveTo(125,253.5,142,253.5);
+	ctx.closePath();
+	ctx.fillStyle = bg;
+	ctx.stroke();
+	ctx.fill();
+	
+	//右腿
+	var bg = ctx.createLinearGradient(0,0,mycanvas.offsetWidth,mycanvas.offsetHeight);
+	bg.addColorStop(0.5, "white");
+	bg.addColorStop(0.4, "#F4F6F1");
+	bg.addColorStop(0.5, "#000");
+	ctx.strokeStyle = "black";
+	ctx.fillStyle = "white";
+	ctx.beginPath();	
+	ctx.lineWidth = 2;
+	ctx.moveTo(208,255);
+	ctx.lineTo(264,255);
+	ctx.quadraticCurveTo(274,260,266,274);
+	ctx.lineTo(209,274);
+	ctx.quadraticCurveTo(200,265,208,255);
+	ctx.closePath();
+	ctx.fillStyle = bg;
+	ctx.stroke();
+	ctx.fill();
+	
+	//插入任意门图片
+	var oImg = new Image();
+	oImg.src = "img/任意门.png"
+	oImg.onload =function() {
+		ctx.drawImage(oImg,-170,-79,710,400)
+	}
+	
+	//插入静香
+	var jingxiang = new Image();
+	jingxiang.src = "img/静香.png"
+	jingxiang.onload =function() {
+		ctx.drawImage(jingxiang,90,220,710,400)
+	}
+</script>

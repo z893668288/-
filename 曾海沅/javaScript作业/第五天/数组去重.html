@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组去重</title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	var arr = [5,2,77,4,3,3,2,2,3,5,5,5];
+	var count = 0;
+	for(var i = 0; i < arr.length; i++) {
+		for(var j = i + 1; j < arr.length;) {
+			count++;
+			if(arr[i] == arr[j]) {
+				arr.splice(j,1);
+			}else {
+				j++;
+			}
+		}
+	}
+	console.log(count);
+	console.log(arr);
+</script>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>随机红包</title>
+	</head>
+	<style type="text/css">
+		.box{
+			position: relative;
+			width: 300px;
+			height: 170px;
+			margin: 0px auto;
+		}
+		.title{
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+			margin-bottom:10px;
+		}
+		/*随机发红包单选框*/
+		.box label:nth-of-type(2){
+			position: absolute;
+			right: 60px;
+		}
+		/*输入金额文本框*/
+		.text1{
+			margin-top: 10px;
+		}
+		/*输入红包数量文本框*/
+		.text2{
+			margin-top: 10px;
+		}
+		/*发红包按钮*/
+		#send{
+			position: absolute;
+			left: 118px;
+			top: 135px;
+			width: 70px;
+			height: 30px;
+		}
+		#aom{
+			width: 300px;
+			height: 170px;
+			border : 1px solid red;
+			margin:10px auto;
+	</style>
+	<body>
+		<div class="box">
+			<div class="title">发红包</div>
+			<label>普通红包：<input type="radio" name="1" id="ordinary"/></label>
+			<label>随机红包：<input type="radio" name="1" id="random" checked="checked" /></label>
+			<div class="text1">
+				<label>输入金额：<input type="text" name="money" id="money" /></label>
+			</div>
+			<div class="text2">
+				<label>红包数量：<input type="text" name="amount" id="amount" /></label>
+			</div>
+			<div>
+				<input type="button" name="" id="send" value="发红包" />
+			</div>
+		</div>
+		<!--红包显示区域-->
+		<div id="aom"></div>
+	</body>
+</html>
+<script type="text/javascript">
+			$("#money").focus();
+			$("#send").onclick = function() {
+				if($("#ordinary").checked){
+					$("#aom").innerHTML = (($("#money").value*1) / ($("#amount").value*1)).toFixed(2);
+				}
+				else if($("#random").checked){
+					one = parseFloat(0.01 + Math.random() * ($("#money").value-(($("#amount").value-1)*0.01))).toFixed(2);
+					$("#aom").innerHTML = one;
+				}
+			}	
+		function $(id) {
+			id = id.substring(1);
+			return document.getElementById(id);
+		}
+</script>

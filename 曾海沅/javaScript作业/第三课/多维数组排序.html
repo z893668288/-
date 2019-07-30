@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	var arr = [
+		[
+			[
+				[3,"2","j"]
+			],
+			[
+				[4,"V",9]
+			]
+		],
+		[
+			["A", "B", "C"],
+			[4, 5, 6, 7],
+			["a"]
+		]
+	];
+	var count = 0;
+	var arr = arr.join();
+	var arr = arr.split(",");/*必须要写明用什么符号分隔，如果是空字符就排序不了*/
+	var temp;
+	/*第一层循环长度不能减1，不然不能完全排序完。*/
+	for(var i = 0; i < arr.length; i++) {
+		for(var j = 0; j< arr.length; j++) {
+			if(arr[i] < arr[j]) {
+				count++;
+				temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+	}
+	console.log(count);
+	console.log(arr.join());
+</script>

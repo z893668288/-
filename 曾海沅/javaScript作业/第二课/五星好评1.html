@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			margin: 0px auto;
+			width: 30px;
+			height: 30px;
+			background: url(img/star.jpg) 0px -70px;
+			float: left;
+		}
+	</style>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
+</html>
+<script type="text/javascript">
+	var type = true;
+	for(var i = 0; i < $("div").length; i++) {
+		$("div")[i].index = i;
+		$("div")[i].onmouseover = function() {
+			type = true;
+			if(type){
+				for(var j = 0;j <= this.index; j++){
+					$("div")[j].style.backgroundPosition = '0 0';
+				}				
+			}	
+		}	
+		$("div")[i].onmouseout = function(){
+			if(!type){return;}
+			for(var j = 0; j < $("div").length; j++){
+				$("div")[j].style.backgroundPosition = '0 -70px';
+			}			
+		}
+		$("div")[i].onclick = function() {
+			type = false; 
+		}
+	}
+	function $(tagName) {
+		return document.getElementsByTagName(tagName);
+	}
+</script>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>复选框和选项卡</title>
+	</head>
+	<style type="text/css">
+		.title{
+			font-size: 20px;
+			font-weight: bold;
+			margin:5px 90px ;
+		}
+		.box{
+			width: 340px;
+			height: 350px;
+			position: absolute;
+			top: 95px;
+			left: 65px;
+			background: #FFF0F5;
+			display: none;
+		}
+		.box1{
+			display: block;
+		}
+		.bigBox{
+			width: 315px;
+			height: 30px;
+			margin-left: 66px;
+			margin-top: 7px;
+			/*border: 1px solid red;*/
+		}
+		.smBox{
+			font-size: 14px;
+			line-height: 30px;
+			text-align: center;
+			display: none;
+			float: left;
+			width: 45px;
+			height: 30px;
+			background: #FEDDEB;
+			cursor: pointer;
+		}
+		.smBox1{
+			width: 45px;
+			height: 30px;
+			background: #FEDDEB;
+			/*position: absolute;
+			top: 65px;
+			left: 75px;*/
+			display: block;
+		}
+		li{
+			position: relative;
+			margin-top: 13px;
+			font-size: 14px;
+			cursor: pointer;
+		}
+		.font{
+			position: absolute;
+			color: #999999;
+			right: 10px;
+		}
+	</style>
+	<body>
+		<div class="title">2019.7.6介绍一周动漫播放时间</div>
+		<label><input type="checkbox" name="ck1" id="ck1" value="" checked="" />星期一</label>
+		<label><input type="checkbox" name="ck1" id="ck2" value="" />星期二</label>
+		<label><input type="checkbox" name="ck1" id="ck3" value="" />星期三</label>
+		<label><input type="checkbox" name="ck1" id="ck4" value="" />星期四</label>
+		<label><input type="checkbox" name="ck1" id="ck5" value="" />星期五</label>
+		<label><input type="checkbox" name="ck1" id="ck6" value="" />星期六</label>
+		<label><input type="checkbox" name="ck1" id="ck7" value="" />星期日</label>
+		<div class="bigBox">
+			<div class="smBox1 smBox">周一</div>
+			<div class="smBox2 smBox">周二</div>
+			<div class="smBox3 smBox">周三</div>
+			<div class="smBox4 smBox">周四</div>
+			<div class="smBox5 smBox">周五</div>
+			<div class="smBox6 smBox">周六</div>
+			<div class="smBox7 smBox">周日</div>
+		</div>
+		<div class="box1 box">
+			<ul>
+				<li><span>猎兽神兵</span><span class="font">第1集</span></li>
+				<li><span>高校星歌剧第三季</span><span class="font">第1集</span></li>
+				<li><span>进击的巨人第三季</span><span class="font">22全集</span></li>
+				<li><span>八月的灰姑娘棒球队</span><span class="font">第11集</span></li>
+				<li><span>Fairy gone</span><span class="font">12全集</span></li>
+				<li><span>RobiHachi</span><span class="font">12全集</span></li>
+				<li><span>Fairy gone</span><span class="font">12全集</span></li>
+				<li><span>多罗罗</span><span class="font">24全集</span></li>
+				<li><span>为什么老是会在这里？</span><span class="font">12全集</span></li>
+				<li><span>弦音 风舞高中弓道部</span><span class="font">14全集</span></li>
+			</ul>
+		</div>
+		<div class="box2 box">
+			<ul>
+				<li><span>魔术学姐</span><span class="font">第1集</span></li>
+				<li><span>你遭难了吗？</span><span class="font">第1集</span></li>
+				<li><span>在世界尽头咏唱恋曲的少女YU-NO</span><span class="font">第14集</span></li>
+				<li><span>钻石王牌 actII</span><span class="font">第14集</span></li>
+				<li><span>黑色五叶草</span><span class="font">第90集</span></li>
+				<li><span>异世界四重奏</span><span class="font">12全集</span></li>
+			</ul>
+		</div>
+		<div class="box3 box">
+			<ul>
+				<li><span>流汗吧！健身少女</span><span class="font">第1集</span></li>
+				<li><span>彼方的阿斯特拉</span><span class="font">第1集</span></li>
+				<li><span>一拳超人第二季</span><span class="font">12全集</span></li>
+				<li><span>贤者之孙</span><span class="font">12全集</span></li>
+				<li><span>贤惠幼妻仙狐小姐</span><span class="font">12全集</span></li>
+			</ul>
+		</div>
+		<div class="box4 box">
+			<ul>
+				<li><span>CAROL & TUESDAY</span><span class="font">第12集</span></li>
+				<li><span>重来吧、魔王大人！</span><span class="font">第1集</span></li>
+				<li><span>魔偶马戏团</span><span class="font">36全集</span></li>
+				<li><span>叛逆性百万亚瑟王</span><span class="font">23全集</span></li>
+				<li><span>原书·原书使</span><span class="font">12全集</span></li>
+			</ul>
+		</div>
+		<div class="box5 box">
+			<ul>
+				<li><span>新石纪</span><span class="font">第1集</span></li>
+				<li><span>女高中生的无所事事</span><span class="font">第1集</span></li>
+				<li><span>为了女儿，我说不定连魔王都能干掉</span><span class="font">第1集</span></li>
+				<li><span>文豪野犬第三季</span><span class="font">12全集</span></li>
+			</ul>
+		</div>
+		<div class="box6 box">
+			<ul>
+				<li><span>骚动时节的少女们啊</span><span class="font">第1集</span></li>
+				<li><span>JOJO的奇妙冒险第五部</span><span class="font">第37集</span></li>
+				<li><span>魔法水果篮</span><span class="font">第14集</span></li>
+				<li><span>炎炎消防队</span><span class="font">第1集</span></li>
+				<li><span>名侦探柯南</span><span class="font">第1002集</span></li>
+				<li><span>MIX</span><span class="font">第13集</span></li>
+				<li><span>奥特英雄 新生代英雄传</span><span class="font">26全集</span></li>
+				<li><span>孤独的躲在角落画圈圈</span><span class="font">12全集</span></li>
+				<li><span>满脑都是○○的我没办法谈恋爱？</span><span class="font">12全集</span></li>
+				<li><span>川柳少女</span><span class="font">12全集</span></li>
+			</ul>
+		</div>
+		<div class="box7 box">
+			<ul>
+				<li><span>海盗战记</span><span class="font">第1集</span></li>
+				<li><span>海贼王</span><span class="font">第892集</span></li>
+				<li><span>鬼灭之刃</span><span class="font">第14集</span></li>
+				<li><span>妖精的尾巴</span><span class="font">第316集</span></li>
+				<li><span>君主·埃尔梅罗二世事件簿 魔眼收集列车 </span><span class="font">第1集</span></li>
+				<li><span>火影忍者 博人传之火影次世代</span><span class="font">第113集</span></li>
+				<li><span>我们无法一起学习</span><span class="font">13全集</span></li>
+				<li><span>一弦定音！</span><span class="font">13全集</span></li>
+				<li><span>消灭都市</span><span class="font">12全集</span></li>
+				<li><span>深夜的超自然公务员</span><span class="font">12全集</span></li>
+			</ul>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	this.onclick = function() {
+
+			if($("#ck1").checked == true) {
+			$(".smBox1")[0].style.display = "block";
+			$(".box1")[0].style.display = "block";
+			}else {
+			$(".smBox1")[0].style.display = "none";
+			$(".box1")[0].style.display = "none";
+			}
+			/*周一结束------------------------------------------*/
+			
+			/*周二开始------------------------------------------*/
+			if($("#ck2").checked == true) {
+			$(".smBox2")[0].style.display = "block";
+			$(".box2")[0].style.display = "block";
+			}else {
+			$(".smBox2")[0].style.display = "none";
+			$(".box2")[0].style.display = "none";
+			}
+			/*周二结束-------------------------------------------*/
+			
+			/*周三开始---------------------------------------*/
+			if($("#ck3").checked == true) {
+			$(".smBox3")[0].style.display = "block";
+			$(".box3")[0].style.display = "block";
+			}else {
+			$(".smBox3")[0].style.display = "none";
+			$(".box3")[0].style.display = "none";
+			}
+			
+			
+			if($("#ck4").checked == true) {
+			$(".smBox4")[0].style.display = "block";
+			$(".box4")[0].style.display = "block";
+			}else {
+			$(".smBox4")[0].style.display = "none";
+			$(".box4")[0].style.display = "none";
+			}
+			
+			if($("#ck5").checked == true) {
+			$(".smBox5")[0].style.display = "block";
+			$(".box5")[0].style.display = "block";
+			}else {
+			$(".smBox5")[0].style.display = "none";
+			$(".box5")[0].style.display = "none";
+			}
+			
+			
+			if($("#ck6").checked == true) {
+			$(".smBox6")[0].style.display = "block";
+			$(".box6")[0].style.display = "block";
+			}else {
+			$(".smBox6")[0].style.display = "none";
+			$(".box6")[0].style.display = "none";
+			}
+			
+			if($("#ck7").checked == true) {
+			$(".smBox7")[0].style.display = "block";
+			$(".box7")[0].style.display = "block";
+			}else {
+			$(".smBox7")[0].style.display = "none";
+			$(".box7")[0].style.display = "none";
+			}
+		}
+		
+	var bigBox = document.getElementsByClassName("bigBox")[0];
+	$(".bigBox")[0].onclick = function() {
+		var target = event.target;
+		var children = this.children;
+		for(var i = 0; i < children.length; i++) {
+			if(target == children[i]) {
+				$(".box")[i].style.zIndex = 1;
+				$(".smBox")[i].style.background = "#f57a82";
+			}else {
+				$(".smBox")[i].style.background = "#FEDDEB";
+				$(".box")[i].style.zIndex = 0;
+			}
+		}
+	}
+		
+	  function $(selector) {
+		var ele;  
+		var prefix = selector.substring(0, 1);
+		if(prefix == "#") {
+			var id = selector.substring(1);  
+			ele = document.getElementById(id);
+		} else if(prefix == ".") {  
+			var className = selector.substring(1);  
+			ele = document.getElementsByClassName(className);
+		}
+		return ele;
+	}	
+</script>

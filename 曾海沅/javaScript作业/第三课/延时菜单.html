@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>延时菜单</title>
+	<!--100ms内移出子菜单，子菜单不弹出-->
+	</head>
+	<style type="text/css">
+	body{
+		background:url(img/延时菜单1.png) no-repeat #678298;
+	}
+	.box{
+		position: absolute;
+		width: 900px;
+		height: 60px;
+		left: 97px;
+		top:55px;
+	}
+	.box .box1{
+		float: left;
+		width: 150px;
+		height: 60px;
+		background: #FFFFFF;
+		line-height: 60px;
+		text-align: center;
+	}
+	.box1:hover{
+		background: #F9FAFA;
+	}
+	.box2{
+		position: absolute;
+		top: 61px;
+		left: 3px;
+		z-index: 99;
+		display: none;
+	}
+	.minBox{
+		position: absolute;
+		width: 189px;
+		height: 394px;
+		left: 101px;
+		top: 117px;
+		background: url(img/背景板3.png);
+	}
+	</style>
+	<body>
+		<div class="box">
+			<div class="box1">
+				App Templates
+				<div class="box2 hite">
+					<img src="img/延时菜单2.png" class="img1"/>
+				</div>
+			</div>
+			<div class="box1">
+				App Templates
+			</div>
+			<div class="box1">
+				App Templates
+			</div>
+			<div class="box1">
+				App Templates
+			</div>
+			<div class="box1">
+				App Templates
+			</div>
+			<div class="box1">
+				App Templates
+			</div>
+		</div>
+		<div class="minBox">
+			<div class="box2">
+					<img src="img/延时菜单2.png" class="img1"/>
+				</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var i = 0;
+	$("box1")[0].onmouseover = function() {
+		var times = setTimeout( function() {
+			$("box2")[0].style.display = "block";		
+		},350)
+		$("box1")[0].onmouseout = function() {
+		clearTimeout(times);
+		$("box2")[0].style.display = "none";
+		}
+	}
+	function $(className) {
+		return document.getElementsByClassName(className);
+	}
+	
+</script>

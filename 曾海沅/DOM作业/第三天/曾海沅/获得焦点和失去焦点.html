@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		ul{
+			margin: 30px auto;
+			width: 100px;
+			height: 30px;
+			list-style-type: none;
+			border: 1px solid black;
+			border-bottom: 0;
+			transition: height 1s; 
+		}
+		li{
+			width: 100px;
+			height: 30px;
+			border-bottom: 1px solid black;
+			background: #6C5F5F;
+			position: absolute;
+			color: white;
+			transition: height 1s; 
+		}
+		input{
+			position: absolute;
+			left: 870px;
+			top: 30px;
+			height: 20px;
+			width: 200px;
+		}
+		ul:hover{
+			height: 155px;
+		}
+		li:hover{
+			height:155px;
+		}
+		.p{
+			display: none;
+			text-align: center;
+			line-height: 30px;
+		}
+		.p1{
+			display: block;
+		}
+		.p:hover{
+			background: #AB9E9E;
+			cursor: pointer;
+		}
+	</style>
+	<body>
+		<ul>
+			<li>
+				<p class="p1 p">歌曲</p>
+				<p class="p">专辑</p>
+				<p class="p">歌手</p>
+				<p class="p">歌词</p>
+				<p class="p">MV</p>
+			</li>
+		</ul>
+		<input type="text" name="text1" id="text1" value="" />
+	</body>
+</html>
+<script type="text/javascript">
+	
+	var oLi = document.getElementsByTagName("li")[0];
+	var text1 = document.getElementById("text1");
+	var p = document.getElementsByClassName("p");
+	text1.focus();
+	oLi.onmouseover = function() {
+		for(var i = 1; i < p.length; i++) {
+			p[i].style.display = "block";
+		}
+		oLi.onmouseout =function() {
+			for(var i = 1; i < p.length; i++) {
+			p[i].style.display = "none";
+			}
+		}
+	}
+	p[0].onclick = function() {
+		text1.value = "十万毫升泪水"
+		text1.focus();
+	}
+	p[1].onclick = function() {
+		text1.value = "天使与魔鬼的对话"
+		text1.focus();
+	}
+	p[2].onclick = function() {
+		text1.value = "蔡健雅"
+		text1.focus();
+	}
+	p[3].onclick = function() {
+		text1.value = "人的一生会积累，十万毫升的泪水"
+		text1.focus();
+	}
+	p[4].onclick = function() {
+		text1.value = "天使与魔鬼"
+		text1.focus();
+	}
+</script>

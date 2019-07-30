@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>第一</div>
+		<div>第二</div>
+		<div>第三</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var stJson = {
+		color: "#ffffff", 
+		fontSize: "22px",
+		backgroundColor: "black",
+		border: "1px solid red"
+		};
+	var oDiv = document.getElementsByTagName("div");
+	for(var i in oDiv) {
+		if(!isNaN(i)) {
+			oDiv[i].style.color = stJson.color;
+			oDiv[i].style.fontSize = stJson.fontSize;
+			oDiv[i].style.backgroundColor = stJson.backgroundColor;
+			oDiv[i].style.border = stJson.border;
+		}
+	}
+</script>

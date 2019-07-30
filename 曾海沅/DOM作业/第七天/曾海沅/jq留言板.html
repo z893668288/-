@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>留言板</title>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		html{
+			background: url(img/甜蜜情侣.jpg);
+			background-size: 100%;
+		}
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+		.box{
+			width: 300px;
+			margin: 200px 470px;
+		}
+		#box1{
+			width: 400px;
+			height: 200px;
+			border: 1px solid #666;
+			overflow: auto;
+			background: rgba(255,255,255,.3);
+		}
+		#box2{
+			width: 402px;
+			height: 80px;
+			border: 1px solid #666;
+			box-sizing: border-box;
+			resize:none;
+			border-top: none;
+			border-bottom:none ;
+			background: rgba(255,255,255,.2);
+		}
+		button{
+			width: 402px;
+			margin-top: -5px;
+			height: 30px;
+			background: rgba(255,255,255,.3);
+			border: 1px solid #666;
+			border-top: none;
+			font-weight: bold;
+			font-size: 16px;
+		}
+		.font1{
+			display: inline-block;
+			margin-top: 5px;
+			padding-right: 30px;
+			padding-left: 5px;
+			background: aliceblue;
+			font-family: "楷体";
+			font-size: 15px;
+		}
+	</style>
+	<body>
+		<div class="box">
+			<div id="box1"></div>
+			<textarea id="box2"></textarea>
+			<button>发送留言</button>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$(function() {
+		$("#box2").focus();
+			var num = $("#box1:last-of-type").prop("offsetTop") - $("#box1").height();
+			$("#box1").prop("scrollTop",num);
+		$("button").click(function() {
+			if($("#box2").val() == "") {
+				alert("内容不能为空");
+			}else {
+				$("#box1").append('<span class ="font1">'+$("#box2").val() +'</span>'+"<br/>");
+				$("#box2").val("").focus();
+			}
+		})
+		$("#box2").keydown(function(ev) {
+			if(ev.keyCode == 13) {
+				if($("#box2").val() == "") {
+					ev.preventDefault();
+					alert("内容不能为空");
+				}else {
+					$("#box1").append('<span class ="font1">'+$("#box2").val() +'</span>'+"<br/>");
+					$("#box2").val("").focus();
+					ev.preventDefault();		
+				}
+			}
+		})
+	})
+</script>

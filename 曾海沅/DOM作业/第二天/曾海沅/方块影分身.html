@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>方块</title>
+	</head>
+	<style type="text/css">
+		.box{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background: greenyellow;
+			text-align: center;
+			line-height: 40px;
+			font-size: 14px;
+			cursor: pointer;
+		}
+		.box div{
+			font-weight: bold;
+			color: red;
+		}
+		#text1{
+			margin-left: 110px;
+		}
+	</style>
+	<body>
+		<div class="box">
+			<div>点击我</div>
+			我有一万个分身
+		</div>
+		<label><input type="radio" name="1" id="text1" value="1" />切换点击模式</label>
+		<label><input type="radio" name="1" id="text2" value="2" />切换拖拽模式</label>
+	</body>
+</html>
+<script type="text/javascript">
+	var box1 = document.getElementsByClassName("box")[0];
+	var text1 = document.getElementById("text1");
+	var text2 = document.getElementById("text2");
+	window.onclick = function() {
+	if(text1.checked == true) {
+		box1.onclick = function(ev) {
+			var ev = ev || window.event;
+			var div = document.createElement("div")
+			var left1 = parseInt(Math.random() * innerWidth);
+		var top1 = parseInt(Math.random() * innerHeight);
+			div.style.width = "100px";
+			div.style.height = "100px";
+			div.style.background = "rgb("+parseInt(Math.random() * 255)+","+parseInt(Math.random() * 255)+","+parseInt(Math.random() * 255)+")";				
+			div.style.position = "absolute";
+			div.style.left = left1 + "px";
+			div.style.top = top1 + "px";
+			var newNode = div.cloneNode(false);
+			document.body.appendChild(newNode);
+		}
+	
+	}
+		if(text2.checked == true) {
+			
+			box1.onmousedown = function() {
+			var newNode = box1.cloneNode(false);
+				document.body.appendChild(newNode);
+				document.onmousemove = function(ev) {
+					var ev = ev || window.event;
+					var ox = ev.pageX;
+					var oy = ev.pageY;
+					newNode.style.cssText = "top: "+(oy-newNode.offsetHeight/2)+"px; left: "+(ox-newNode.offsetWidth/2)+"px";
+					newNode.style.background = "rgb("+parseInt(Math.random() * 255)+","+parseInt(Math.random() * 255)+","+parseInt(Math.random() * 255)+")";
+				}
+				newNode.onmouseup = function() {
+					document.onmousemove = null;
+				}
+			}
+		}
+	}
+			
+</script>

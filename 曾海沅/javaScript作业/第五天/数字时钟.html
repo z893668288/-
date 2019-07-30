@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数字时钟</title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 320px;
+			margin: 0px auto;
+			background: #D7E9D9;
+		}
+	</style>
+	<body>
+		<div></div>
+	</body>
+</html>
+<script type="text/javascript">
+	var times = setInterval(function() {
+		clock();
+	},1000);
+	function clock() {
+		var odate = new Date();
+	var hours = odate.getHours();
+	var minute = odate.getMinutes();
+	var second = odate.getSeconds();
+	function add(num) {
+		if(num <= 9 && num >= 0) {
+			return "0" + num;
+		}else {
+			return num;
+		}
+	}
+	hoursLeft = add(hours).toString().substring(0,1);
+	hoursRight = add(hours).toString().substring(1,2);
+	minureLeft = add(minute).toString().substring(0,1);
+	minureRight = add(minute).toString().substring(1,2);
+	secondLeft = add(second).toString().substring(0,1);
+	secondRight = add(second).toString().substring(1,2);
+	var result = '<img src=img/' + hoursLeft +'.png/>' + '<img src=img/' + hoursRight +'.png/>'+
+				'<img src=img/点.png/>' + '<img src=img/' + minureLeft +'.png/>' + 
+				'<img src=img/' + minureRight + '.png/>' + " <img src=img/点.png/>"+ 
+				'<img src=img/' + secondLeft +'.png/>' + '<img src=img/' + secondRight +'.png/>';
+	var oDiv = document.getElementsByTagName("div");
+		oDiv[0].innerHTML = result;
+		if(hours >= 18 || hours <= 5) {
+		document.body.style.background = "url(img/月亮.jpg) no-repeat";
+		document.body.style.backgroundSize = "100%";
+		document.body.style.overflow = "hidden" ;
+		document.body.style.backgroundPositionY = "-300px";
+		}else if(hours <= 17 && hours >= 6){
+			document.body.style.background = "url(img/太阳.jpg) no-repeat";
+			document.body.style.backgroundSize = "100%";
+			document.body.style.overflow = "hidden" ;
+			document.body.style.backgroundPositionY = "-300px";
+		}
+	}
+	clock();
+	
+</script>

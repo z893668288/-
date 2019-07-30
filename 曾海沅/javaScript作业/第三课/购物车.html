@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+	</head>
+	<style type="text/css">
+		.add1{
+			display: inline-block;
+			width: 15px;
+			height: 20px;
+			position: relative;
+			top: 2px;
+			left: 2px;
+			text-align: center;
+		}
+		.text3{
+			position:absolute;
+			border: 1px solid #A9A9A9;
+			width: 100px;
+			height: 20px;
+			top: 212px;
+			left: 110px;
+		}
+		.text4{
+			position:absolute;
+			border: 1px solid #A9A9A9;
+			width: 100px;
+			height: 20px;
+			top: 212px;
+			left: 310px;
+		}	
+		
+		.num1,.num2{
+			position: absolute;
+			top: 210px;
+			left: 30px;
+		}
+		.num2{
+			position: absolute;
+			top: 210px;
+			left: 220px;
+		}
+	</style>
+	<body>
+		<ul>
+			<li>
+				<button class="but1">-</button>
+				<span>
+					<div class="add1"></div>
+					件
+				</span>
+				<button class="but2">+</button>
+				<span class="money">4.00元结果：</span>
+				<input type="text" name="text1" class="text1" value="" />
+			</li>
+			<li>
+				<button class="but1">-</button>
+				<span>
+					<div class="add1"></div>
+				件
+				</span>
+				<button class="but2">+</button>
+				<span class="money">1.00元结果：</span>
+				<input type="text" name="text1" class="text1" value="" />
+			</li>
+			<li>
+				<button class="but1">-</button>
+				<span>
+					<div class="add1"></div>
+				件
+				</span>
+				<button class="but2">+</button>
+				<span class="money">1.00元结果：</span>
+				<input type="text" name="text1" class="text1" value="" />
+			</li>
+			<li>
+				<button class="but1">-</button>
+				<span>
+					<div class="add1"></div>
+				件
+				</span>
+				<button class="but2">+</button>
+				<span class="money">1.00元结果：</span>
+				<input type="text" name="text1" class="text1" value="" />
+			</li>
+			<li>
+				<button class="but1">-</button>
+				<span>
+					<div class="add1"></div>
+				件
+				</span>
+				<button class="but2">+</button>
+				<span class="money">1.00元结果：</span>
+				<input type="text" name="text1" class="text1" value="" />
+			</li>
+			<li>
+				<button class="but1">-</button>
+				<span>
+					<div class="add1"></div>
+				件
+				</span>
+				<button class="but2">+</button>
+				<span class="money">8.00元结果：</span>
+				<input type="text" name="text1" class="text1" value="" />
+			</li>
+			<li>
+				<button class="but1">-</button>
+				<span>
+					<div class="add1"></div>
+				件
+				</span>
+				<button class="but2">+</button>
+				<span class="money">6.00元结果：</span>
+				<input type="text" name="text1" class="text1" value="" />
+			</li>
+		</ul>
+		<input type="button" name="text3" class="num1" value="商品总计" />
+		<div class="text3"></div>
+		<button class="num2">价格总计：</button>
+		<div class="text4"></div>
+	</body>
+</html>
+<script type="text/javascript">
+	/*第1个商品-----------------------------开始-------------------------------------------------------*/
+	$("add1")[0].innerHTML = 0;
+	$("but1")[0].onclick = function() {
+			if($("add1")[0].innerHTML == 0) {
+				$("text1")[0].value = 0 + "元";
+			}else{
+				$("add1")[0].innerHTML -= 1;
+			$("text1")[0].value = $("add1")[0].innerHTML * 4 ;
+			}	
+	}
+	$("but2")[0].onclick = function() {
+			$("add1")[0].innerHTML = 1 + $("add1")[0].innerHTML * 1;
+			$("text1")[0].value = $("add1")[0].innerHTML * 4 ;
+	}
+	
+	/*第2个商品---------------------------开始--------------------------------------------------------------*/
+	$("add1")[1].innerHTML = 0;
+	$("but1")[1].onclick = function() {
+			if($("add1")[1].innerHTML == 0) {
+				$("text1")[1].value = 0 + "元";
+			}else{
+				$("add1")[1].innerHTML -= 1;
+			$("text1")[1].value = $("add1")[1].innerHTML * 1 ;
+			}	
+	}
+	$("but2")[1].onclick = function() {
+			$("add1")[1].innerHTML = 1 + $("add1")[1].innerHTML * 1;
+			$("text1")[1].value = $("add1")[1].innerHTML * 1 ;
+	}
+	
+	/*第3个商品---------------------------开始--------------------------------------------------------------*/
+	$("add1")[2].innerHTML = 0;
+	$("but1")[2].onclick = function() {
+			if($("add1")[2].innerHTML == 0) {
+				$("text1")[2].value = 0 + "元";
+			}else{
+				$("add1")[2].innerHTML -= 1;
+			$("text1")[2].value = $("add1")[2].innerHTML * 1 ;
+			}	
+	}
+	$("but2")[2].onclick = function() {
+			$("add1")[2].innerHTML = 1 + $("add1")[2].innerHTML * 1;
+			$("text1")[2].value = $("add1")[2].innerHTML * 1 ;
+	}
+	
+	/*第4个商品---------------------------开始--------------------------------------------------------------*/
+	$("add1")[3].innerHTML = 0;
+	$("but1")[3].onclick = function() {
+			if($("add1")[3].innerHTML == 0) {
+				$("text1")[3].value = 0 + "元";
+			}else{
+				$("add1")[3].innerHTML -= 1;
+			$("text1")[3].value = $("add1")[3].innerHTML * 1 ;
+			}	
+	}
+	$("but2")[3].onclick = function() {
+			$("add1")[3].innerHTML = 1 + $("add1")[3].innerHTML * 1;
+			$("text1")[3].value = $("add1")[3].innerHTML * 1 ;
+	}
+	
+	/*第5个商品---------------------------开始--------------------------------------------------------------*/
+	$("add1")[4].innerHTML = 0;
+	$("but1")[4].onclick = function() {
+			if($("add1")[4].innerHTML == 0) {
+				$("text1")[4].value = 0 + "元";
+			}else{
+				$("add1")[4].innerHTML -= 1;
+			$("text1")[4].value = $("add1")[4].innerHTML * 1 ;
+			}	
+	}
+	$("but2")[4].onclick = function() {
+			$("add1")[4].innerHTML = 1 + $("add1")[4].innerHTML * 1;
+			$("text1")[4].value = $("add1")[4].innerHTML * 1 ;
+	}
+	
+	/*第6个商品---------------------------开始--------------------------------------------------------------*/
+	$("add1")[5].innerHTML = 0;
+	$("but1")[5].onclick = function() {
+			if($("add1")[5].innerHTML == 0) {
+				$("text1")[5].value = 0 + "元";
+			}else{
+				$("add1")[5].innerHTML -= 1;
+			$("text1")[5].value = $("add1")[5].innerHTML * 8 ;
+			}	
+	}
+	$("but2")[5].onclick = function() {
+			$("add1")[5].innerHTML = 1 + $("add1")[5].innerHTML * 1;
+			$("text1")[5].value = $("add1")[5].innerHTML * 8 ;
+	}
+	
+	/*第7个商品---------------------------开始--------------------------------------------------------------*/
+	$("add1")[6].innerHTML = 0;
+	$("but1")[6].onclick = function() {
+			if($("add1")[6].innerHTML == 0) {
+				$("text1")[6].value = 0 + "元";
+			}else{
+				$("add1")[6].innerHTML -= 1;
+			$("text1")[6].value = $("add1")[1].innerHTML * 6 ;
+			}	
+	}
+	$("but2")[6].onclick = function() {
+			$("add1")[6].innerHTML = 1 + $("add1")[6].innerHTML * 1;
+			$("text1")[6].value = $("add1")[6].innerHTML * 6 ;
+	}
+	
+	$("num1")[0].onclick = function() {
+		$("text3")[0].innerHTML = $("add1")[0].innerHTML * 1 + $("add1")[1].innerHTML * 1 + $("add1")[2].innerHTML * 1 +
+								 $("add1")[3].innerHTML * 1 + $("add1")[4].innerHTML * 1 + $("add1")[5].innerHTML * 1 +
+								 $("add1")[5].innerHTML * 1 + "件";
+	}
+	
+	$("num2")[0].onclick = function() {
+		$("text4")[0].innerHTML = $("text1")[0].value * 1 + $("text1")[1].value * 1 + $("text1")[2].value * 1 + $("text1")[3].value * 1 + 
+								$("text1")[4].value * 1 + $("text1")[5].value * 1 + $("text1")[6].value * 1 + "元";
+	}
+	function $(className) {
+		return document.getElementsByClassName(className);
+	}
+</script>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.big{
+			position: relative;
+			display:flex;
+			width: 550px;
+			margin: 0px auto;
+			justify-content: space-between;
+			/*border: 1px solid red;*/
+			background: #FF784D;
+			z-index: -3;
+		}
+		.box{
+			position: relative;
+			width: 100px;
+			height: 300px;
+			border-radius: 10px 10px 0 0;
+			display: flex;
+			justify-content: center;
+			background: rgba(208,90,60,.4);
+			z-index: -2;
+			box-shadow: 2px 2px 6px 1px #000 inset;
+		}
+		.circle{
+			position: absolute;
+			width: 60px;
+			height: 60px;
+			border: 20px solid rgba(208,90,60,.7);
+			border-radius: 50%;
+			bottom: 0px;
+			z-index: -2;
+			/*background: rgba(199,174,167,.4);*/
+		}
+		.big21{
+			position: absolute;
+			top: 25px;
+			height: 190px;
+			width: 20px;
+			animation: 1.5s bb linear infinite;
+			transform-origin: 50px 15px;
+			z-index: -1;
+			background-image: url(img/铁皮.png);
+		}
+		.big22{
+			position: absolute;
+			top: 25px;
+			height: 190px;
+			width: 20px;
+			animation: 1.6s bb linear infinite;
+			transform-origin: 50px 15px;
+			z-index: -1;
+			background-image: url(img/铁皮.png);
+		}
+		.big23{
+			position: absolute;
+			top: 25px;
+			height: 190px;
+			width: 20px;
+			animation: 1.7s bb linear infinite;
+			transform-origin: 50px 15px;
+			z-index: -1;
+			background-image: url(img/铁皮.png);
+		}
+		.big24{
+			position: absolute;
+			top: 25px;
+			height: 190px;
+			width: 20px;
+			animation: 1.8s bb linear infinite;
+			transform-origin: 50px 15px;
+			z-index: -1;
+			background-image: url(img/铁皮.png);
+		}
+		.big25{
+			position: absolute;
+			top: 25px;
+			height: 190px;
+			width: 20px;
+			animation: 1.9s bb linear infinite;
+			transform-origin: 50px 15px;
+			z-index: -1;
+			background-image: url(img/铁皮.png);
+		}
+		.hammer{
+			/*position: absolute;*/
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 0px;
+			left: 0px;
+			width: 100px;
+			height: 50px;
+			border-top: 4px solid #787777;
+			border-bottom: 4px solid #787777;
+			background-image: url(img/铁皮.png);
+			border-radius: 10px;
+			color: #484544;
+			font-size: 30px;
+			font-weight: bold;
+			text-shadow:1px 0.5px 0 #000000;
+			animation: 1.5s aa linear infinite;
+		}
+		.hammer2{
+			/*position: absolute;*/
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 0px;
+			left: 0px;
+			width: 100px;
+			height: 50px;
+			border-top: 4px solid #787777;
+			border-bottom: 4px solid #787777;
+			background-image: url(img/铁皮.png);
+			border-radius: 10px;
+			color: #484544;
+			font-size: 30px;
+			font-weight: bold;
+			text-shadow:1px 0.5px 0 #000000;
+			animation: 1.6s aa linear infinite;
+		}
+		.hammer3{
+			/*position: absolute;*/
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 0px;
+			left: 0px;
+			width: 100px;
+			height: 50px;
+			border-top: 4px solid #787777;
+			border-bottom: 4px solid #787777;
+			background-image: url(img/铁皮.png);
+			border-radius: 10px;
+			color: #484544;
+			font-size: 30px;
+			font-weight: bold;
+			text-shadow:1px 0.5px 0 #000000;
+			animation: 1.7s aa linear infinite;
+		}
+		.hammer4{
+			/*position: absolute;*/
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 0px;
+			left: 0px;
+			width: 100px;
+			height: 50px;
+			border-top: 4px solid #787777;
+			border-bottom: 4px solid #787777;
+			background-image: url(img/铁皮.png);
+			border-radius: 10px;
+			color: #484544;
+			font-size: 30px;
+			font-weight: bold;
+			text-shadow:1px 0.5px 0 #000000;
+			animation: 1.8s aa linear infinite;
+		}
+		.hammer5{
+			/*position: absolute;*/
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 0px;
+			left: 0px;
+			width: 100px;
+			height: 50px;
+			border-top: 4px solid #787777;
+			border-bottom: 4px solid #787777;
+			background-image: url(img/铁皮.png);
+			border-radius: 10px;
+			color: #484544;
+			font-size: 30px;
+			font-weight: bold;
+			text-shadow:1px 0.5px 0 #000000;
+			animation: 1.9s aa linear infinite;
+		}
+		
+		.sliver{
+			width: 20px;
+			height: 160px;
+			background-image: url(../img/铁皮.png);
+			border-radius: 0px 0px 50px 50px;
+			z-index: 0;
+		}
+		.sliver1{
+			position: absolute;
+			top: 145px;
+			width: 20px;
+			height: 50px;
+			background: #3D3D3D;
+			z-index: -1;
+			border-radius: 0px 0px 50px 50px;
+		}
+		.circular{
+			position: absolute;
+			top: 175px;
+			z-index: 2;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background: #D5D5D5;
+		}
+		@keyframes aa{
+			0%{top: 0px;}
+			50%{top: 78px;}
+			100%{top: 0px;}
+		}
+		
+		@keyframes bb{
+			0%{transform: rotate(0deg);top: 25px;}
+			6%{transform: rotate(7deg);top: 25px;}
+			25%{transform: rotate(14deg);top: 25px;}
+			32%{transform: rotate(16deg);top: 25px;}
+			43%{transform: rotate(10deg);top: 25px;}
+			50%{transform: rotate(0deg);top: 25px;}
+			66%{transform: rotate(-9deg);top: 25px;}
+			75%{transform: rotate(-15deg);top: 25px;}
+			88%{transform: rotate(-14deg);top: 25px;}
+			100%{transform: rotate(0deg);top: 25px;}
+		}
+	</style>
+	<body>
+		<div class="big">
+			<div class="box">
+				<div class="hammer">T
+					<div class="big21">
+						<div class="sliver"></div>
+						<div class="sliver1"></div>
+						<div class="circular"></div>
+					</div>
+				</div>
+				<div class="circle"></div>
+			</div>
+			<div class="box">
+				<div class="hammer2">R
+					<div class="big22">
+						<div class="sliver"></div>
+						<div class="sliver1"></div>
+						<div class="circular"></div>
+					</div>
+				</div>
+				<div class="circle"></div>
+			</div>
+			<div class="box">
+				<div class="hammer3">A
+					<div class="big23">
+						<div class="sliver"></div>
+						<div class="sliver1"></div>
+						<div class="circular"></div>
+					</div>
+				</div>
+				<div class="circle"></div>
+			</div>
+			<div class="box">
+				<div class="hammer4">I
+					<div class="big24">
+						<div class="sliver"></div>
+						<div class="sliver1"></div>
+						<div class="circular"></div>
+					</div>
+				</div>
+				<div class="circle"></div>
+			</div>
+			<div class="box">
+				<div class="hammer5">N
+					<div class="big25">
+						<div class="sliver"></div>
+						<div class="sliver1"></div>
+						<div class="circular"></div>
+					</div>
+				</div>
+				<div class="circle"></div>
+			</div>
+		</div>
+	</body>
+</html>

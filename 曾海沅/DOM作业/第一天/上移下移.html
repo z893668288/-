@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<ul>
+			<li>1.
+				<input type="button" value="上移" />
+				<input type="button" value="下移" /></li>
+			<li>2.
+				<input type="button" value="上移" />
+				<input type="button" value="下移" /></li>
+			<li>3.
+				<input type="button" value="上移" />
+				<input type="button" value="下移" /></li>
+			<li>4.
+				<input type="button" value="上移" />
+				<input type="button" value="下移" /></li>
+			<li>5.
+				<input type="button" value="上移" />
+				<input type="button" value="下移" /></li>
+		</ul>
+
+	</body>
+
+</html>
+<script type="text/javascript">
+	var aInput = document.getElementsByTagName('input');
+	var oUl = document.getElementsByTagName('ul')[0];
+
+	for(var i = 0; i < aInput.length; i++) {
+		if(i % 2 == 0) { //上移
+			aInput[i].onclick = function() {
+				var nowLi = this.parentNode;
+				var prevLi = previousNode(nowLi);
+
+				if(!prevLi) {
+					alert('到顶');
+				} else {
+					oUl.insertBefore(nowLi, prevLi);
+				}
+			};
+		} else //下移
+		{
+			aInput[i].onclick = function() {
+				var nowLi = this.parentNode;
+				var nextLi = nextNode(nowLi);
+
+				if(!nextLi) {
+					alert('到底');
+				} else {
+					oUl.insertBefore(nextLi, nowLi);
+				}
+			};
+
+		}
+
+	}
+
+	function firstNode(obj) {
+		if(!obj.firstChild) {
+			return false;
+		}
+		return obj.firstElementChild || (obj.firstChild.nodeType == 1 ? obj.firstChild : nextNode(obj.firstChild));
+	}
+
+	function lastNode(obj) {
+		if(!obj.lastChild) {
+			return false;
+		}
+		return obj.lastElementChild || (obj.lastChild.nodeType == 1 ? obj.lastChild : previousNode(obj.lastChild));
+	}
+
+	function nextNode(obj) {
+		if(!obj.nextSibling) {
+			return false;
+		}
+		return obj.nextElementSibling || (obj.nextSibling.nodeType == 1 ? obj.nextSibling : nextNode(obj.nextSibling));
+	}
+
+	function previousNode(obj) {
+		if(!obj.previousSibling) {
+			return false;
+		}
+		return obj.previousElementSibling || (obj.previousSibling.nodeType == 1 ? obj.previousSibling : previousNode(obj.previousSibling));
+	}
+</script>

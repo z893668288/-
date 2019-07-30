@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单4</title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		.boxCenter1 a{
+			text-decoration: none;
+		}
+		.box{
+			width: 630px;
+			height: 640px;
+			margin: 0px auto;
+		}
+		.boxTop{
+			height: 50px;
+			width: 580px;
+			font-size: 16px;
+			font-weight: bold;
+			text-indent: 3em;
+			line-height: 50px;
+		}
+		.boxCenter1{
+			position: relative;
+			width: 580px;
+			height: 230px;
+			margin: 0px auto;
+			border-top:1px solid  #E6E6E6;
+			font-size: 14px;
+			
+		}
+		.boxCenter1 p{
+			margin-top: 12px;
+		}
+		.boxCenter1 span:nth-of-type(1){
+			
+			position: absolute;
+			left: 40px;
+			
+		}
+		.boxCenter1 span:nth-of-type(2){
+			color: red;
+			position: absolute;
+			left: 145px;
+		}
+		.boxCenter1 input:nth-of-type(1){
+			position: absolute;
+			left: 160px;
+			width: 200px;
+			height: 22px;
+		}
+		.boxCenter1 span:nth-of-type(3){
+			font-size: 13px;
+			position: absolute;
+			left: 160px;
+		}
+		.boxCenter1 span:nth-of-type(4){
+			position: absolute;
+			left: 28px;
+			top: 140px;
+		}
+		.boxCenter1 span:nth-of-type(5){
+			position: absolute;
+			left: 145px;
+			color: red;
+			top: 140px;
+		}
+		.boxCenter1 input:nth-of-type(2){
+			position: absolute;
+			top: 140px;
+			left: 160px;
+			width: 200px;
+			height: 22px;
+		}
+		.boxCenter1 span:nth-of-type(6){
+			position: absolute;
+			left: 28px;
+			top: 180px;
+		}
+		.boxCenter1 span:nth-of-type(7){
+			position: absolute;
+			left: 145px;
+			color: red;
+			top: 180px;
+		}
+		.boxCenter1 input:nth-of-type(3){
+			position: absolute;
+			top: 180px;
+			left: 160px;
+			width: 200px;
+			height: 22px;
+		}
+		.boxCenter2{
+			position: relative;
+			width: 580px;
+			height: 200px;
+			margin: 0px auto;
+			border-top:1px solid  #E6E6E6;
+			font-size: 14px;
+		}
+		.boxCenter2 span:nth-of-type(1){
+			position: absolute;
+			left: 70px;
+			top: 30px;
+		}
+		.boxCenter2 span:nth-of-type(2){
+			position: absolute;
+			left: 145px;
+			top: 30px;
+			color: red;
+		}
+		.boxCenter2 .text1{
+			position: absolute;
+			left: 160px;
+			top: 30px;
+			width: 200px;
+			height: 22px;
+		}
+		.boxCenter2 span:nth-of-type(3){
+			position: absolute;
+			left: 100px;
+			top: 73px;
+		}
+		.boxCenter2 span:nth-of-type(4){
+			position: absolute;
+			left: 145px;
+			top: 75px;
+			color: red;
+		}
+		
+		.boxCenter2 label:nth-of-type(1){
+			position: absolute;
+			left: 170px;
+			top: 75px;
+		}
+		.boxCenter2 label:nth-of-type(2){
+			position: absolute;
+			left: 240px;
+			top: 75px;
+		}
+		.boxCenter2 span:nth-of-type(5){
+			position: absolute;
+			left: 75px;
+			top: 110px;
+		}
+		.boxCenter2 span:nth-of-type(6){
+			position: absolute;
+			left: 145px;
+			top: 110px;
+			color: red;
+		}
+		.boxCenter2 select:nth-of-type(1){
+			position: absolute;
+			left: 160px;
+			top: 110px;
+			width: 60px;
+		}
+		.boxCenter2 span:nth-of-type(7){
+			position: absolute;
+			left: 225px;
+			top: 110px;
+			
+		}
+		.boxCenter2 select:nth-of-type(2){
+			position: absolute;
+			left: 245px;
+			top: 110px;
+			width: 40px;
+		}
+		.boxCenter2 span:nth-of-type(8){
+			position: absolute;
+			left: 290px;
+			top: 110px;
+		}
+		.boxCenter2 select:nth-of-type(3){
+			position: absolute;
+			left: 310px;
+			top: 110px;
+			width: 40px;
+		}
+		.boxCenter2 span:nth-of-type(9){
+			position: absolute;
+			left: 355px;
+			top: 110px;
+		}
+		.boxCenter2 span:nth-of-type(10){
+			position: absolute;
+			left: 47px;
+			top: 150px;
+		}
+		.boxCenter2 span:nth-of-type(11){
+			position: absolute;
+			left: 145px;
+			top: 150px;
+			color: red;
+		}
+		.boxCenter2 select:nth-of-type(4){
+			position: absolute;
+			left: 160px;
+			top: 150px;
+			width: 205px;
+		}
+		.boxBottom{
+			position: relative;
+			width: 580px;
+			height: 200px;
+			margin: 0px auto;
+			border-top:1px solid  #E6E6E6;
+			font-size: 14px;
+		}
+		.boxBottom span:nth-of-type(1){
+			position: absolute;
+			left: 90px;
+			top: 30px;
+		}
+		.boxBottom span:nth-of-type(2){
+			position: absolute;
+			left: 145px;
+			top: 30px;
+			color: red;
+		}
+		.boxBottom input:nth-of-type(1){
+			position: absolute;
+			left: 160px;
+			top: 30px;
+			width: 80px;
+			height: 22px;
+		}
+		.boxBottom img{
+			position: absolute;
+			width: 110px;
+			left: 250px;
+			top: 25px;
+		}
+		.boxBottom a:nth-of-type(1){
+			position: absolute;
+			color: #000000;
+			left: 250px;
+			top: 87px;
+		}
+		.boxBottom a:nth-of-type(2){
+			position: absolute;
+			color: #000000;
+			left: 160px;
+			top: 120px;
+		}
+		.boxBottom input:nth-of-type(2){
+			position: absolute;
+			width: 180px;
+			height: 28px;
+			left: 160px;
+			top: 150px;
+			background-color: red;
+			color: white;
+		}
+	</style>
+	<body>
+		<div class="box">
+			<div class="boxTop">注册： 开通您的开心账户</div>
+			<div class="boxCenter1">
+				<p>开心网是帮助你与你的朋友、同事、同学、家人保持更紧密联系的真实社交平台，通过这个平台，
+					你可以及时了解他们的最新动态；分享你的照片、心情、快乐；结识更多的新朋友。</p>
+				<br /><br />
+				<span>你的电子邮件:</span>
+				<span>*</span>
+				<input type="text"  />
+				<br/><br />
+				<span>如果没有邮箱，你可以<a href="#">用账号注册</a></span>
+				<br/>
+				<span>设置开心网密码:</span>
+				<span>*</span>
+				<input type="password" name="" id="" value="" />
+				<br/>
+				<span>再输入一遍密码:</span>
+				<span>*</span>
+				<input type="password" name="" id="" value="" />
+			</div>
+			<div class="boxCenter2">
+				<span>你的姓名:</span>
+				<span>*</span>
+				<input class="text1" type="text" name="text1"/>
+				<br/><br />
+				<span>性别:</span>
+				<span>*</span>
+				<label><input type="radio" name="sex" checked=""/>男</label>
+				<label><input type="radio" name="sex" />女</label>
+				<br/>
+				<span>出生日期:</span>
+				<span>*</span>
+				<select name="">
+					<option value=""></option>
+				</select>
+				<span>年</span>
+				<select name="">
+					<option value=""></option>
+				</select>
+				<span>月</span>
+				<select name="">
+					<option value=""></option>
+				</select>
+				<span>日</span>
+				<br/>
+				<span>谁可以浏览我:</span>
+				<span>*</span>
+				<select name="">
+					<option value="">仅我的好友可以浏览我</option>
+				</select>
+			</div>
+			<div class="boxBottom">
+				<span>验证码:</span>
+				<span>*</span>
+				<input type="text" name="" id="" value="" />
+				<img src="../img/验证码.jpg"/>
+				<a href="#">看不清 换一张</a>
+				<a href="#">开心网服务条款</a>
+				<input type="submit" name="" id="" value="同意条款，立即注册" />
+			</div>
+			
+		</div>
+	</body>
+</html>

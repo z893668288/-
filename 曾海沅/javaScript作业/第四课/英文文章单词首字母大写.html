@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>英文文章单词首字母大写.html</title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	var str = "qin xiao jie ni hao!"
+	for(var i = 0; i < str.length; i++) {
+		if(str[i] == " ") {
+		str.split("").splice(str.split("")[i],str.split("")[i+1],str[i+1].toUpperCase())
+		str = str[i+1].toUpperCase();
+		}
+	}
+
+//	console.log(str.split("").splice(str.split("")[i],str.split("")[i+1],str.split("")[i+1].Uppercase())
+//);
+//	var a2 = str.substring(0,1).toUpperCase();
+//	var result = a1 + a2;
+//	console.log(result);
+</script>

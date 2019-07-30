@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>运算时间</title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	var start = new Date();
+	var add = 0;
+	for(var i = 0; i < 10000000; i++) {
+		add += i; 
+	}
+	
+	var end = new Date();
+
+	var	result = end.getTime() - start.getTime();
+	console.log(result);
+</script>

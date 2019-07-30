@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>注册验证</title>
+		<style>
+			*{margin: 0; padding: 0;}
+			ul,li{
+				list-style: none;
+			}
+			form{
+				width: 524px;
+				height: auto;
+				margin: 100px auto;
+				font-size: 14px;
+			}
+			.clear{zoom: 1;}
+			.clear::after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			ul{
+				width: 413px;
+				border: 1px #ccc solid;
+				border-radius: 5px;
+				margin: 0 auto;
+			}
+			li{
+				float: left;
+				width: 137px;
+				height: 32px;
+				line-height: 32px;
+				text-align: center;
+				background: #f2f4f3;
+				border-right: 1px solid #ccc;
+			}
+			ul li:last-child{
+				border-right: none;
+			}
+			li:hover{
+				cursor: pointer;
+			}
+			.active{
+				color: #fff;
+				background: #2d75bf;
+			}
+			p{
+				font-family: "微软雅黑";
+				font-size: 14px;
+				margin-top: 10px;
+			}
+			.f_p{
+				margin-top: 20px;
+			}
+			.sugg{
+				font-size: 12px;
+				color: #999;
+				padding-left: 106px;
+				padding-bottom: 10px;
+			}
+			i{
+				color: red;
+				padding: 0 5px;
+			}
+			span{
+				display: inline-block;
+				width: 90px;
+				text-align: right;
+			}
+			input[type =text],input[type =password]{
+				height: 25px;
+				width: 350px;
+				margin-left: 15px;
+				border: 1px #ccc solid;
+				border-radius: 2px;
+				padding-left: 10px;
+				box-shadow: 2px 2px 3px #EDEDED inset;
+			}
+			#email{
+				width: 255px;
+			}
+			select{
+				height: 25px;
+				font-weight: bold;
+				border-radius: 2px;
+			}
+			#tel{
+				padding-left: 80px;
+				width: 280px;
+				background: url(img/01.png) 1px center no-repeat;
+			}
+			#code{
+				width: 215px;
+			}
+			div{
+				position: relative;
+				padding: 10px 0 0;
+			}
+			div .sugg{
+				padding-top: 10px;
+			}
+			.img_p{
+				width: 122px;
+				position: absolute;
+				top: 0px;
+				right: 57px;
+				text-align: center;
+			}
+			a{
+				font-size: 12px;
+				text-decoration: none;
+			}
+			button{
+				width: 150px;
+				height: 30px;
+				margin-left: 105px;
+				font-weight: bold;
+				color: #555;
+				cursor: pointer;
+			}
+			input[type =button]{
+			    width: 119px;
+				height: 37px;
+				font-size: 14px;
+			    background: #60B54C;
+			    line-height: 37px;
+			    color: #FFF;
+			    font-weight: bold;
+			    border: 1px #008000 solid;
+			    border-radius: 3px;
+			    margin-left: 105px;
+			    cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="">
+			<ul class="clear">
+				<li class="active">注册字母邮箱</li>
+				<li>注册手机号码邮箱</li>
+				<li>注册VIP邮箱</li>
+			</ul>
+			<p class="f_p"><span><i>*</i>邮件地址</span><input type="text" name="tel" id="email"/>@
+			<select>
+				<option>163.com</option>
+				<option>126.com</option>
+				<option>qq.com</option>
+			</select></p>
+			<p class="sugg">6~18个字符，可使用字母、数字、下划线，需以字母开头</p>
+			<p><span><i>*</i>密码</span><input type="password" name="" id="pwd" /></p>
+			<p class="sugg">6~16个字符，区分大小写</p>
+			<p><span><i>*</i>确认密码</span><input type="password" name="" id="repwd" /></p>
+			<p class="sugg">请再次填写密码</p>
+			<p><span><i>*</i>手机号码</span><input type="text" name="" id="tel" /></p>
+			<p class="sugg">忘记密码时，可通过手机号码快速找回密码</p>
+			<div class="div2">
+				<p><span><i>*</i>验证码</span><input type="text" name="" id="code" /></p>
+				<p class="sugg">请填写图中的字符，不区分大小写</p>
+				<p class="img_p"><img src="img/validate-code.png"/><a href="javascript:void(0)">看不清楚？换张图片</a></p>
+			</div>
+			<p><button>免费获取验证码</button></p>
+			<p><span><i>*</i>短信验证码</span><input type="text" name="tel" id="info" /></p>
+			<p class="sugg">请查收手机短信，并填写短信中的验证码</p>
+			<p class="sugg"><input type="checkbox" name="ck" id="ck" value=""  checked="checked"/>&nbsp;同意<a href="javascript:void(0)">"服务条款"</a>和<a href="javascript:void(0)">"隐私权相关政策"</a></p>
+			<input type="button" name="btn" id="btn" value="立即注册" disabled="disabled" />
+		</form>
+		<script>
+			var oEmail = document.getElementById('email');//邮箱
+			var oPwd = document.getElementById('pwd');//密码
+			var oRePwd = document.getElementById('repwd');//确认密码
+			var oTel = document.getElementById('tel');//电话号码
+			var oBtn = document.getElementById('btn');//注册
+			var oSugg = document.getElementsByClassName('sugg');//提示
+			var aInput = document.getElementsByTagName('input');//所有的input框
+			
+			//当鼠标移出时验证邮箱
+			oEmail.onblur = function(){
+				//邮箱input的value
+				var emailValue = (this.value).trim();//trim 清除空格
+				//验证的正则
+				var re = /^[a-zA-Z]\w{5,17}$/;
+				if(!re.test(emailValue)){
+					oSugg[0].innerHTML = '您的邮箱地址不符合要求，第一个字符必须为字母，请重新输入';
+					oSugg[0].style.color = 'red';
+				}else{
+					oSugg[0].innerHTML = '您的邮箱地址输入正确';
+					oSugg[0].style.color = 'green';
+				}
+			}
+			//鼠标移入
+			oEmail.onfocus = function(){
+				oSugg[0].innerHTML = '6~18个字符，可使用字母、数字、下划线，需以字母开头';
+				oSugg[0].style.color = '';				
+			}
+			
+			//密码验证
+			oPwd.onblur = function(){
+				var pwdValue = (this.value).trim();//trim 清除空格
+				console.log(pwdValue);
+				var re = /^\w{6,16}$/;
+				if(!re.test(pwdValue)){
+					oSugg[1].innerHTML = '您的密码格式不符合要求请重新输入';
+					oSugg[1].style.color = 'red';
+				}else if(pwdValue != (oRePwd.value).trim()  &&  (oRePwd.value).trim() != ''){
+					oSugg[1].innerHTML = '您输入的密码正确';
+					oSugg[1].style.color = 'green';
+					
+					oSugg[2].innerHTML = '两次输入的密码不一致，请重新输入';
+					oSugg[2].style.color = 'red';
+				}else{
+					oSugg[1].innerHTML = '您输入的密码正确';
+					oSugg[1].style.color = 'green';
+				}
+				
+			}
+			//鼠标移入
+			oPwd.onfocus = function(){
+				oSugg[1].innerHTML = '6~16个字符，区分大小写';
+				oSugg[1].style.color = '';				
+			}
+			
+			//确认密码验证
+			oRePwd.onblur = function(){
+				var pwdValue = (this.value).trim();//trim 清除空格
+				var re = /^\w{6,16}$/;
+				if(!re.test(pwdValue)){
+					oSugg[2].innerHTML = '您的确认密码格式不符合要求请重新输入';
+					oSugg[2].style.color = 'red';
+				}else if(pwdValue !=  (oPwd.value).trim() ){
+					oSugg[2].innerHTML = '两次输入的密码不一致，请重新输入';
+					oSugg[2].style.color = 'red';
+					
+				}else{
+					oSugg[2].innerHTML = '您输入的确认密码正确';
+					oSugg[2].style.color = 'green';
+				}
+				
+			}
+			//鼠标移入
+			oRePwd.onfocus = function(){
+				oSugg[2].innerHTML = '6~16个字符，区分大小写';
+				oSugg[2].style.color = '';				
+			}
+			
+			//验证手机
+			oTel.onblur = function(){
+				var pwdValue = (this.value).trim();//trim 清除空格
+				var re =  /^1[3-9]\d{9}$/g;
+				if(!re.test(pwdValue)){
+					oSugg[3].innerHTML = '您的确认号码不正确请重新输入';
+					oSugg[3].style.color = 'red';
+				}else{
+					oSugg[3].innerHTML = '您输入的确认密码正确';
+					oSugg[3].style.color = 'green';
+				}
+			}
+			//鼠标移入
+			oTel.onfocus = function(){
+				oSugg[3].innerHTML = '忘记密码时，可通过手机号码快速找回密码';
+				oSugg[3].style.color = '';				
+			}
+		</script>
+	</body>
+</html>
+	

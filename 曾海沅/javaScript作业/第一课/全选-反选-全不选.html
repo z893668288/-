@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>全选-反选-全不选</title>
+	</head>
+	<body>矿泉水：
+		<input type="checkbox" name="1"  value="" />怡宝
+		<input type="checkbox" name="1"  value="" />景田
+		<input type="checkbox" name="1"  value="" />农夫山泉
+		<input type="checkbox" name="1"  value="" />康师傅
+		<div>
+			<input type="button" value="全选" onclick="bnt1()"/>
+			<input type="button" value="反选" onclick="bnt2()"/>
+			<input type="button" value="全不选" onclick="bnt3()"/>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var input1 = document.getElementsByTagName("input");
+	function bnt1() {
+		for(var i = 0; i < input1.length; i++) {
+			input1[i].checked = true;
+		}
+	}
+	function bnt2() {
+		for(var i = 0; i < input1.length; i++) {
+			input1[i].checked = !input1[i].checked;
+		}
+	}
+	function bnt3() {
+		for(var i = 0; i < input1.length; i++) {
+			input1[i].checked = false;
+		}
+	}
+</script>

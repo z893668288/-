@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>广告轮播图</title>
+	</head>
+	<style type="text/css">
+		.parent {
+			width: 800px;
+			overflow: hidden;
+			margin: 0 auto;
+		}
+		
+		.item {
+			float: left;
+			width: 800px;
+			height: 337px;
+		}
+		
+		.item img {
+			width: 800px;
+			cursor: pointer;
+		}
+		
+		.hide {
+			width: 0px;
+			height: 0px;
+		}
+	</style>
+	<body>
+		<div class="parent" id="parent">
+			<div class="item hide">
+				<img src="img/小米1.jpg"  />
+			</div>
+			<div class="item hide">
+				<img src="img/小米2.jpg"  />
+			</div>
+			<div class="item hide">
+				<img src="img/小米3.jpg"  />
+			</div>
+			<div class="item hide">
+				<img src="img/小米4.jpg"  />
+			</div>
+			<div class="item">
+				<img src="img/小米5.jpg"  />
+			</div>
+		</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+	// 获取所有的item
+	var items = document.getElementsByClassName("item");
+	var previous = 4;
+	var latter = 3;
+	var previousLeft = 0;
+	var latterLeft = -800;
+	
+	/*开启定时任务，进行滚动*/
+	var timer = setInterval(roll, 1);
+	
+	/*滚动*/
+	function roll() {
+		if(previousLeft == 800 || latterLeft == 0) {
+			// 结束当前任务
+			clearInterval(timer);
+			
+			setTimeout(function() {
+				timer = setInterval(roll, 1);
+			}, 1000);
+			
+			// 当5张图片全部滚动完成后，第二轮的第一张图片之前设置了marginTop，现在还原
+			items[latter].style.marginTop = "0px";
+			
+			// 将当前滚动before的class设置为: item hide
+			items[previous].className = "item hide";
+			// 将当前滚动after的class设置为：item
+			items[latter].className = "item";
+			
+			// 一波图片滚动完成后，需要的猛如虎操作
+			// 修改previous
+			if(previous == 0) {
+				previous = 4;
+			} else {
+				previous--;
+			}
+			// 重置previousLeft
+			previousLeft = 0;
+			// 修改latter
+			if(latter == 0) {
+				latter = 4;
+			} else {
+				latter--;
+			}
+			// 重置latterLeft
+			latterLeft = -800;
+		} else {
+			items[previous].style.marginLeft = ++previousLeft + "px";
+			items[latter].style.marginLeft = ++latterLeft + "px";
+			if(latter == 4) {
+				items[latter].style.marginTop = "-337px";
+			}
+		}
+	}
+</script>

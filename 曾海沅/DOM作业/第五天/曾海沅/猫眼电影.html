@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>
+		<script src="js/ajax.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		html{
+			overflow-x: hidden;
+		}
+		.boxTop{
+			position: fixed;
+			width: 100%;
+			height: 50px;
+			background: #E54847;
+			color: white;
+			text-align: center;
+			line-height: 50px;
+			font-size: 18px;
+			top: 0px;
+			left: 0px;
+		}
+		.boxCenter{
+			display: flex;
+			flex-flow:nowrap ;
+			position: fixed;
+			width: 100%;
+			height: 45px;
+			top: 50px;
+			left: 0px;
+			border: 1px solid #E6E6E6;
+			background: rgba(255,255,255,1);
+		}
+		.box1{
+			display: flex;
+			max-width: 345px;
+			min-width: 90px;
+			height: 45px;
+			flex-shrink: 2;
+			flex-grow: 1;
+			justify-content: center;
+			align-items: center;
+			line-height: 45px;
+			border-bottom: 2px solid #EF4238;
+			color: #EF4238;
+		}
+		.box2{
+			display: flex;
+			max-width: 345px;
+			min-width: 90px;
+			height: 45px;
+			flex-shrink: 2;
+			flex-grow: 1;
+			justify-content: center;
+			align-items: center;
+		}
+		.box3{
+			display: flex;
+			min-width: 100px;
+			flex-shrink:2 ;
+			flex-grow: 1;
+		}
+		.box4{
+			display: flex;
+			min-width: 100px;
+			flex-shrink:2 ;
+			flex-grow: 1;
+		}
+		.boxCenter span:nth-of-type(1){
+			position: absolute;
+			left: 15px;
+			line-height: 45px;
+			color: #666666;
+		}
+		.boxCenter i:nth-of-type(1){
+			position: absolute;
+			right: 15px;
+			font-size: 20px;
+			line-height: 45px;
+			color: #EF4238;
+		}
+		.boxCenter i:nth-of-type(2){
+			position: absolute;
+			left: 50px;
+			top: 12px;
+			font-size: 18px;
+			color: #B0B0B0;
+		}
+		.downBox{
+			display: flex;
+			position: fixed;
+			width: 100%;
+			height: 55px;
+			min-height: 100%;
+			align-items: flex-end;
+			left: 0px;
+			top: 0px;
+		}
+		.downBox1{
+			display: flex;
+			position: fixed;
+			width: 100%;
+			height: 55px;
+			border-top: 1px solid #D8D8D8;
+			flex-shrink: 1;
+			flex-grow: 1;
+			left: 0px;
+			background: rgba(255,255,255,1);
+			
+		}
+		.downBox1 i:nth-of-type(1){
+			width: 33%;
+			text-align: center;
+			font-size: 24px;
+			color: #F03D37;
+		}
+		.downBox1 i:nth-of-type(2){
+			width: 34%;
+			text-align: center;
+			font-size: 20px;
+			margin-top: 2px;
+		}
+		.downBox1 i:nth-of-type(3){
+			width: 33%;
+			text-align: center;
+			font-size: 20px;
+			margin-top: 2px;
+		}
+		.icon-dianying span{
+			display: block;
+			font-size: 14px;
+			margin-top: 2px;
+			color: #F03D37;
+		}
+		.icon-huaban span{
+			display: block;
+			font-size: 14px;
+			margin-top: 2px;
+		}
+		.icon-wode span{
+			display: block;
+			font-size: 14px;
+			margin-top: 2px;
+		}
+		ul{
+			list-style: none;
+			position: relative;
+			top: 100px;
+			z-index: -1;
+		}
+		.left{
+			width: 80px;
+			height: 115px;
+		}
+		.left img{
+			height: 108px;
+		}
+		.right{
+			width: 100%;
+			height: 110px;
+			border-bottom: 1px solid #F9F9F9;
+			margin-top: -118px;
+			margin-left: 85px;
+			line-height: 10px;
+			font-size: 15px;
+			position: absolute;
+			font-size: 13px;
+			color: #666666;
+		}
+		.buy{
+			background: #F03D37;
+			padding: 2px 4px;
+			border-radius:6px ;
+			width: 45px;
+			height: 25px;
+			text-align: center;
+			line-height: 25px;
+			color: white;
+			position:absolute;
+			right: 140px;
+			top: -90px;
+		}
+		.fontcolor{
+			color: #FAAF00;
+			margin-left: 3px;
+		}
+		.fontsize{
+			font-size: 19px;
+			font-weight: bold;
+		}
+	</style>
+	<body>
+		<div class="boxTop">猫眼电影</div>
+		<div class="boxCenter">
+			<i class="iconfont icon-fangdajing"></i>
+			<i class="iconfont icon-choose"></i>
+			<span>深圳</span>
+			<div class="box3"></div>
+			<div class="box1">正在热播</div>
+			<div class="box2">即将上映</div>
+			<div class="box4"></div>
+			<span></span>
+		</div>
+		<div class="downBox">
+			<div class="downBox1">
+				<i class="iconfont icon-dianying"><span>电影</span></i>
+				<i class="iconfont icon-huaban"><span>影院</span></i>
+				<i class="iconfont icon-wode"><span>我的</span></i>
+			</div>
+		</div>
+		<ul>
+			
+		</ul>
+	</body>
+</html>
+<script type="text/javascript">
+			
+			var oUl = document.getElementsByTagName("ul")[0];
+			ajax('get','https://www.easy-mock.com/mock/5ba06ec82ee5a7654dc13dd7/example/maoyanfilm','', function(data){
+				
+				var movieList = data.movieList;
+				console.log(movieList)
+				for(var i=0; i<movieList.length; i++){
+					var each = movieList[i];	//每一条数据
+					var actor = "";
+					var	actors = "";
+						actor += each.star+' ';
+						if(actor.length > 5) {
+						actors = actor.substring(0,8)+"...";
+						}
+					var buy = document.getElementsByClassName("buy")[0];
+					
+					var sc = each.sc?'观众评<span class = "fontcolor">'+each.sc+'</span>':'';	
+					if(each.preShow == true) {
+						each.preShow = "预售";
+						buy.style.background = "#3C9FE6";
+						console.log(buy.style.background)
+					}else{
+						each.preShow = "购票";
+						
+					}
+					var d3 = '<img src="img/3D.png"/>';
+					var path = "http://p0.meituan.net/"+ each.img.substring(26);
+					oUl.innerHTML += '<li><div class="left">' + '<img src="'+ path +'" >'+ '</div><div class="right"><div class="text"><p><span class="fontsize">' + each.nm+'</span><span>'+ d3 +'</span></p><p>'+sc+'</p><p>主演: '+actors+'</p><p>'+each.showInfo+'</p></div><span class = "buy">'+ each.preShow +'</span></li>';					
+				}
+			});
+</script>

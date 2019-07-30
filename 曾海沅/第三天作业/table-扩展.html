@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		.box1{
+			width: 800px;
+			height: 50px;
+			margin: 20px auto;
+			border: 1px solid gainsboro;
+			text-align: center;
+			line-height: 50px;
+		}
+		.box1 input{
+			width: 60px;
+			margin-left: 30px;
+		}
+		.box2{
+			width: 800px;
+			height: 40px;
+			margin: -20px auto;
+			border: 1px solid gainsboro;
+			text-align: center;
+			line-height: 50px;
+			border-top: 0px;
+			border-bottom: 0px;
+		}
+		table{
+			
+			border-collapse: collapse;
+			border: 1px solid gainsboro;
+			width: 802px;
+		}
+		td{
+			height: 30px;	
+			border: 1px solid gainsboro;
+			padding: 0px 12px 0px 12px;
+			text-align: center;
+		}
+		td:nth-of-type(12){
+			width: 80px;	
+		}
+		.boxBottom{
+			width: 800px;
+			margin: 20px auto;
+	</style>
+	<body>
+		<div class="box1">
+			出诊时间： <select name="chuzhen">
+						<option value="time">-请选择-</option>
+					</select>
+					<select name="chuzhen">
+						<option value="time">-请选择-</option>
+					</select>
+			门诊类型： <select name="chuzhen">
+						<option value="time">-请选择-</option>
+					</select>
+					<select name="chuzhen">
+						<option value="time">-请选择-</option>
+					</select>
+					<input type="submit" name="" id="" value="查询" />
+		</div>
+		<div class="box2">
+			<img src="../img/普通门诊.png"/>
+			<span>普通门诊</span>
+			<img src="../img/专家门诊.png"/>
+			<span>专家门诊</span>
+			<img src="../img/特需门诊.png"/>
+			<span>特需门诊</span>
+			<img src="../img/夜间门诊.png"/>
+			<span>夜间门诊</span>
+		</div>
+		<div class="boxBottom">
+			<table>
+				<thead style="color: green;">
+					<td>医生姓名</td>
+					<td>所在科室</td>
+					<td>擅长</td>
+					<td></td>
+					<td>一</td>
+					<td>二</td>
+					<td>三</td>
+					<td>四</td>
+					<td>五</td>
+					<td>六</td>
+					<td>日</td>
+					<td>联系医生</td>
+				</thead>
+				<tr>
+					<td  rowspan="3"><p style="color: green;margin-bottom: 10px;">马雯</p>副主任医师</td>
+					<td  rowspan="3">眼科</td>
+					<td  rowspan="3">视神经、视网膜、<br/>脉络膜病...[详情]</td>
+					<td>上</td>
+					<td><img src="../img/专家门诊.png"</td>
+					<td></td>
+					<td><img src="../img/专家门诊.png"</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td rowspan="3"></td>
+				</tr>
+				<tr>
+					<td>下</td>
+					<td></td>
+					<td><img src="../img/专家门诊.png"</td>
+					<td><img src="../img/专家门诊.png"</td>
+					<td></td>
+					<td><img src="../img/专家门诊.png"</td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					<td>晚</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					<td  rowspan="3"><p style="color: green;margin-bottom: 10px;">刘运良</p>其他</td>
+					<td  rowspan="3">神经内科</td>
+					<td  rowspan="3">临床神经病学，脑<br/>血管病的...[详情]</td>
+					<td>上</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><td><img src="../img/专家门诊.png"</td></td>
+					<td></td>
+					<td rowspan="3"></td>
+				</tr>
+				<tr>
+					<td>下</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					<td>晚</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td  rowspan="3"><p style="color: green;margin-bottom: 10px;">蒋剑</p>主治医师</td>
+					<td  rowspan="3">眼科</td>
+					<td  rowspan="3"></td>
+					<td>上</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><img src="../img/普通门诊.png"</td>
+					<td></td>
+					<td></td>
+					<td rowspan="3"></td>
+				</tr>
+				<tr>
+					
+					<td>下</td>
+					<td></td>
+					<td></td>
+					<td><img src="../img/普通门诊.png"</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					
+					<td>晚</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					<td  rowspan="3"><p style="color: green;margin-bottom: 10px;">贺楚峰</p>主治医师</td>
+					<td  rowspan="3">耳鼻咽喉科</td>
+					<td  rowspan="3"></td>
+					<td>上</td>
+					<td><img src="../img/普通门诊.png"</td>
+					<td></td>
+					<td><img src="../img/普通门诊.png"</td>
+					<td><img src="../img/普通门诊.png"</td>
+					<td><img src="../img/普通门诊.png"</td>
+					<td></td>
+					<td></td>
+					<td rowspan="3"></td>
+				</tr>
+				<tr>
+					<td>下</td>
+					<td><img src="../img/普通门诊.png"</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><img src="../img/普通门诊.png"</td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					<td>晚</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					<td  rowspan="3"><p style="color: green;margin-bottom: 10px;">吕冰清</p>其他</td>
+					<td  rowspan="3">神经内科</td>
+					<td  rowspan="3">小儿神经病（弱智<br/>和脑瘫）</td>
+					<td>上</td>
+					<td><img src="../img/特需门诊.png"</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td rowspan="3"></td>
+				</tr>
+				<tr>
+					<td>下</td>
+					<td></td>
+					<td><img src="../img/特需门诊.png"</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>晚</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

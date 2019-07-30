@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义对象</title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	function Phone(phoneBrand,price,call) {
+		this.phoneBrand = phoneBrand;
+		this.price = price;
+		this.call = call;
+		this.getphoneBrand = function() {
+			return this.phoneBrand;
+		}
+		this.setphoneBrand = function(phoneBrand) {
+			this.phoneBrand = phoneBrand;
+		}
+		this.getprice = function() {
+			return this.price;
+		}
+		this.setprice = function(price) {
+			this.price = price;
+		}
+	}
+	var c1 = new Phone("华为",3400,function() {
+		console.log("你这是什么手机啊！好漂亮：" + this.phoneBrand+ "<-->" +"多少钱啊！"+ this.price +"元！")
+	})
+	c1.call();
+	c1.setphoneBrand("小米");
+	c1.setprice(2699);
+	c1.call();
+</script>

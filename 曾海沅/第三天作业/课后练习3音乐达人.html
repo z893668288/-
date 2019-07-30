@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.s{
+				width: 859px;
+				height: 320px;
+				background-color: #FDCF3C;
+				padding: 50px 50px 50px 50px;
+				margin:auto
+			}
+			.d{
+				float: left;
+				width: 210px;
+				height: 329px;
+			}
+			.d1{
+				width: 182px;
+				height: 40px;
+				background-color: #FDAF61;
+				border-radius: 5px;
+				line-height: 40px;
+				padding-left: 30px;
+				color: #BC312F;
+				font-weight: bold;
+			}
+			.d2{
+				width: 208px;
+				height: 260px;
+				background-color: #FED1A7;
+				border:2px solid #FFFFFF;
+				border-top: 0px;
+				padding-top: 8px;
+			}
+			.d3{
+				width: 212px;
+				height: 25px;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+				background-color: #FEA041;
+			}
+			.d4{
+				width: 200px;
+				height: 200px;
+				background-color: #fff;
+				margin-left: 5px ;
+			}
+			.d .d2 img{
+				margin-top: 10px;
+				margin-left: 20px;
+			}
+			.a{
+				float: left;
+				width: 417px;
+				height: 280px;
+				margin-left: 7px;
+				margin-right: 7px;
+			}
+			.a1{
+				width: 419px;
+				height: 40px;
+				color: #BC312F;
+				background-color: #FDAF61;
+				border-radius: 5px;
+				font-weight: bold;
+			}
+			.a1-1{
+				line-height: 40px;
+				padding-left:30px ;
+			}
+			.a1-2{
+				position: relative;
+				left: 370px;
+				top: -40px;
+			}
+			.a2{
+				width: 410px;
+				height: 200px;
+				padding-top: 15px;
+				padding-left: 5px;
+				font-size: 12px;
+				border: 2px solid #FFDDB8;
+				border-top: 0px;
+				
+			}
+			.a2-1{
+				float: left;
+				width: 145px;
+				height:190px;
+				background-color: #FF9935;
+				border-radius: 5px;
+			}
+			.a2 .a2-11{
+				margin-left: 23px;
+			}
+			.a2 .a2-12{
+				width: 50px;
+				height: 17px;
+				border: 2px solid #FCD38B;
+				margin-left: 43px;
+				margin-top: -8px;
+				text-align: center;
+				border-radius: 10px;
+			}
+			.a2 .a2-13{
+				margin-top:2px;
+				margin-left: 23px;
+			}
+			.a2 .a2-14{
+				margin-top:8px;
+				margin-left: 43px;
+				border: 2px solid #E3E2E2;
+				border-radius: 10px;
+				width: 50px;
+				height: 17px;
+				background-color: #C1C1C1;
+				text-align: center;
+			}
+			.a2-2,.a2-3{
+				float: left;
+				margin-left: -1px;
+				margin-top: 2px;
+			}
+			.a2 img{
+				border: 2px solid #FFFFFF;
+				margin-top: 10px;
+				margin-left: 9px;
+			}
+			.a3{
+				width: 418px;
+				height: 25px;
+				background-color: #FFAF60;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+			}
+			.b{
+				float: left;
+				width: 212px;
+				height: 303px;
+				color: #BC312F;
+				font-weight: bold;
+			}
+			.b1{
+				width: 212px;
+				height: 40px;
+				background-color: #FFB468;
+				border-radius: 5px;
+			}
+			.b1-1{
+				line-height: 40px;
+				padding-left: 20px;
+			}
+			.b1-2{
+				position: relative;
+				left: 160px;
+				top: -40px;
+			}
+			.b2{
+				width: 208px;
+				height: 235px;
+				background-color: #FFD3A6;
+				border:2px solid #FFDDB8;
+				border-top: 2px solid #FFD3A6;
+			}
+			.b3{
+				width: 212px;
+				height: 25px;
+				background-color: #FEAB57;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+			}
+			.button{
+				display: inline-block;
+				padding: 3px;
+				border-radius: 10px;
+				background-color: #DEDEDE;
+				font-size: 12px;
+				border: 1px solid #C2C2C0;
+				font-family: "微软雅黑";
+				margin-left: 6px;
+				margin-top: 5px;
+				font-weight: bold;
+			}
+			.button-red{
+				background-color: #FE9B37;
+				display: inline-block;
+				padding: 3px;
+				border-radius: 10px;
+				font-size: 12px;
+				border: 1px solid #C2C2C0;
+				font-family: "微软雅黑";
+				margin-left: 6px;
+				margin-top: 5px;
+				color: #D4532B;
+				font-weight: bold;
+			}
+			.b2-1{
+				list-style: none;
+			}
+			.b2-11{
+				position: relative;
+				float: left;
+				font-size: 13px;
+				border: 2px solid #FDA34A;
+				padding: 3px 2px 3px 2px;
+				background-color: #FEC676;
+				border-bottom-left-radius: 8px;
+				border-bottom-right-radius: 8px;
+				left: -30px;
+				top: -17px;
+				height: 18px;
+			}
+			.b2-11 span{
+				background-color: #FD9E3B;
+				border-radius: 3px;
+				padding: 3px;
+			}
+			.b2-12{
+				position: relative;
+				float: left;
+				font-size: 13px;
+				border: 2px solid #CAC1B8;
+				padding: 3px 2px 3px 2px;
+				background-color: #FEC676;
+				border-bottom-left-radius: 8px;
+				border-bottom-right-radius: 8px;
+				left: -26px;
+				top: -17px;
+				height: 18px;
+			}
+			.b2-12 span{
+				background-color: #C1C1C1;
+				border-radius: 3px;
+				padding: 3px;
+			}
+			.b2-13{
+				position: relative;
+				float: left;
+				font-size: 13px;
+				border: 2px solid #CAC1B8;
+				padding: 3px 2px 3px 2px;
+				background-color: #FEC676;
+				border-bottom-left-radius: 8px;
+				border-bottom-right-radius: 8px;
+				left: -23px;
+				top: -17px;
+				height: 18px;
+			}
+			.b2-13 span{
+				background-color: #C1C1C1;
+				border-radius: 3px;
+				padding: 3px;
+			}
+			.b2-11,/*.b2-12,.b2-13*/:after{
+				display: block;
+				content: "";
+				clear: both;
+			}
+			.b2-2{
+				
+			}
+			ol li{
+				position: relative;
+				font-size: 12px;
+				line-height: 23px;
+				color: #000000;
+				top: -22px;
+				left: -5px;
+				font-weight: normal;
+				border-bottom: 1px dotted #000000;
+				width: 145px;
+				height: 24px;
+			}
+			.b2-21{
+				position: relative;
+				top: 5px;
+				left: 2px;
+			}
+			.b2-22{
+				position: relative;
+				font-size: 12px;
+				text-decoration: underline;
+				top: -34px;
+				left: 140px;
+			}
+			.b3{
+				
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<div class="s">
+				<div class="d">
+					<div class="d1">音乐达人</div>
+					<div class="d2">
+						<div class="d4">
+							<img src="../img/音乐达人1.PNG"/>
+						</div>
+						<div>
+							<span class="button-red">个人资料</span>
+							<span class="button">交友资料</span>
+							<span class="button">加为好友</span>
+							<br>
+							<span class="button">个人资料</span>
+							<span class="button">交友资料</span>
+							<span class="button">加为好友</span>
+						</div>
+					</div>
+					<div class="d3"></div>
+				</div>
+				<div class="a">
+					<div class="a1">
+						<span class="a1-1">视频</span>
+						<span class="a1-2">more</span>
+					</div>
+					<div class="a2">
+						<div class="a2-1">
+							<img src="../img/视频1.PNG"/>
+							<span class="a2-11">爱的初体验 233票</span>
+							<div class="a2-12">投票</div>
+						</div>
+						<div class="a2-2">
+							<img src="../img/视频2.PNG"/>
+							<div class="a2-13">爱的初体验 233票</div>
+							<div class="a2-14">投票</div>
+						</div>
+						<div class="a2-3">
+							<img src="../img/视频3.PNG"/>
+							<div class="a2-13">爱的初体验 233票</div>
+							<div class="a2-14">投票</div>
+						</div>
+					</div>
+					<div class="a3"></div>
+				</div>
+				<div class="b">
+					<div class="b1">
+						<span class="b1-1">视频</span>
+						<span class="b1-2">more</span>
+					</div>
+					<div class="b2">
+						<ul class="b2-1">
+							<li class="b2-11"><span>歌单一</span></li>
+							<li class="b2-12"><span>歌单二</span></li>
+							<li class="b2-13"><span>歌单三</span></li>
+						</ul>
+						<div class="b2-2">
+							<ol>
+								<li>有没有人告诉你-陈楚生<img src="../img/耳机.PNG" class="b2-21"/></li>
+								<li>改变自己-王力宏<img src="../img/耳机.PNG" class="b2-21"/></li>
+								<li>还不是因为爱-苏醒<img src="../img/耳机.PNG" class="b2-21"/></li>
+								<li>西界-林俊杰<img src="../img/耳机.PNG" class="b2-21"/></li>
+								<li>我们的歌-王力宏<img src="../img/耳机.PNG" class="b2-21"/></li>
+								<li>如果你也听说-张惠妹<img src="../img/耳机.PNG" class="b2-21"/></li>
+								<li>热浪-温岚<img src="../img/耳机.PNG" class="b2-21"/></li>
+							</ol>
+							<span class="b2-22">试听全部</span>
+						</div>
+					</div>
+					<div class="b3"></div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

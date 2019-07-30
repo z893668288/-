@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>模拟发短信</title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			
+		}
+		/*主体盒子*/
+		.bigBox{
+			position: relative;
+			width: 216px;
+			height: 338px;
+			left: 20px;
+			top: -464px;
+		}
+		.hpBox{
+			position: absolute;
+			width:28px;
+			height: 32px;
+			left: 25px;
+			top: 421px;
+			border-radius: 6px;
+		}
+		#text1{
+			position: absolute;
+			width: 127px;
+			height: 29px;
+			border-radius: 6px;
+			top: 423px;
+			left: 59px;
+			outline: none;
+			border: none;
+		}
+		#sub{
+			position: absolute;
+			left: 189px;
+			top: 422px;
+			font-size: 20px;
+			color: #AAA8AD;
+			height: 31px;
+			width: 46px;
+			font-family: "微软雅黑";
+			background-color:#F5F5F5 ;
+			border: none;
+			/*outline: none;*/
+		}
+		#img1{
+			position: absolute;
+			left: 29px;
+			top: 427px;
+		}
+		#img2{
+			position: absolute;
+			left: 29px;
+			top: 427px;
+		}
+		.hite{
+			display: none;
+		}
+		.color1 img{ 
+			position: absolute;
+			left: 5px;
+		}
+		.color2 img{
+			position: absolute;
+			right: 5px;
+		}
+		.color1{ 
+			background:#F7F7F7; 
+			color:#000; 
+			margin-right:10px; 
+			margin-left:30px;
+			margin-top: 6px;
+		}
+		.color2{ 
+			background: #D1EEEE; 
+			color:#000; 
+			margin-right:30px; 
+			margin-left:10px; 
+			margin-top: 6px;
+			text-align: right;
+		}
+	</style>
+	<body>
+		<img src="img/iPhone.png"/>
+		<div class="bigBox" id="bigBox"></div>
+		<div class="downBox">
+			<img src="img/qq2.gif" id="img1"/>
+			<div class="hpBox" id="hpBox"></div>
+			<input type="text" id="text1" value="" />
+			<input type="submit" value="发送" id="sub"  />
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+		document.getElementById("text1").focus();	
+		var img2 = true;
+		document.body.parentNode.style.overflow = "hidden";
+		/*----------------按键事件开始------------------------------------------*/
+		document.onkeydown = function(e) {
+			var e = e || $("hpBox").event;
+			if(e.keyCode == 32){
+				if(img2) {  
+				$("img1").src = "img/qq1.gif";
+				}else {
+					$("img1").src = "img/qq2.gif";
+				}
+				img2 = !img2;
+			}
+			var e = e || $("sub").event;
+			if(e.keyCode == 13){
+				if(img2) {
+					$("bigBox").innerHTML += '<div class="color1"><img src="img/qq2.gif"> ' + $("text1").value + '</div>';
+				}else {
+					$("bigBox").innerHTML += '<div class="color2"><img src="img/qq1.gif"> ' + $("text1").value + '</div>';
+				}
+				$("text1").value = "";	
+			}
+		}
+		/*按键事件结束------------------------------------------------------*/
+		
+		/*点击事件--------------------开始----------------------------------*/
+		$("hpBox").onclick = function() {
+			if(img2) {
+				$("img1").src = "img/qq1.gif";
+			}else {
+				$("img1").src = "img/qq2.gif";
+			}
+			img2 = !img2;
+		}
+		$("sub").onclick = function() {
+			if(img2) {
+				$("bigBox").innerHTML += '<div class="color1"><img src="img/qq2.gif"> ' + $("text1").value + '</div>';
+			}else {
+				$("bigBox").innerHTML += '<div class="color2"><img src="img/qq1.gif"> ' + $("text1").value + '</div>';
+			}
+			$("text1").value = "";
+		}
+		/*--------------点击事件结束-----------------------------------------------*/
+		function $(id) {
+			return document.getElementById(id);
+		}
+</script>

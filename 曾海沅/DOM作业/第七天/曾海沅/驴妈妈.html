@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<script src="js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/驴妈妈.css"/>
+		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>
+	<title></title>
+	</head>
+	<style type="text/css">
+		
+	</style>
+	<body>
+		<div class="topRed">
+			<div class="topLeft"><span>上海</span><i class="iconfont icon-arrow"></i></div>
+			<div class="topCenter">
+				<i class="iconfont icon-fangdajing"></i>
+				<input type="text" name="" id="" placeholder="搜索景区/目的地/酒店/邮轮" />
+				<div></div>
+			</div>
+			<div class="topRight">
+				<div>
+					<i class="iconfont icon-kefu"></i>
+					<i class="iconfont icon-my"></i>
+				</div>
+			</div>
+		</div>
+		<div class="kong"></div>
+		<div class="lunbotu"></div>
+		<div class="wheel"><img src="img/轮播1.jpg"/></div>
+		<div class="topBox">
+			<div>热门活动</div>
+			<div>虽然有钱也要精打细算</div>
+		</div>
+		<div class="popular">
+			<div><img src="img/热门1.jpg"/></div>
+			<div><img src="img/热门2.jpg"/></div>
+		</div>
+		<div class="popular1">
+			<div><img src="img/热门3.jpg"/></div>
+			<div><img src="img/热门4.jpg"/></div>
+			<div><img src="img/热门5.jpg"/></div>
+		</div>
+		<div class="market">
+			<div><img src="img/门市.png"/></div>
+			<div>
+				<span>为你推荐的当地门市</span>
+				<span>驴妈妈旅游(古北店)</span>
+			</div>
+			<div><span>更多门店</span></div>
+		</div>
+		<div class="like">
+			<div>猜你喜欢</div>
+			<div>精挑细选热卖排行榜</div>
+		</div>
+		<div class="option2">
+			<div class="options">
+				<div class="red">门票</div>
+				<div class="">周边游</div>
+				<div class="">酒店</div>
+				<div class="">国内游</div>
+				<div class="">出境游</span>
+			</div>
+		</div>
+		<ul class="newb">
+			<li class="newb1">
+				<!--<span class="rd">
+					<div><img src="https://pics.lvjs.com.cn//uploads/pc/place2/2019-04-28/0c65e72a-ede4-4463-a0c8-aefeabe6316b_480_320.jpg"/></div>
+					<div>上海野生动物园</div>
+					<div><span>驴悦亲子</span></div>
+					<div><span>￥109</span><span>起</span><span>97.4%满意</span></div>
+				</span>
+				<span class="rd">
+					<div><img src="https://pics.lvjs.com.cn//uploads/pc/place2/2019-04-28/0c65e72a-ede4-4463-a0c8-aefeabe6316b_480_320.jpg"/></div>
+					<div>上海野生动物园</div>
+					<div><span>驴悦亲子</span></div>
+					<div><span>￥109</span><span>起</span><span>97.4%满意</span></div>
+				</span>-->
+			</li>
+			<li class="optionBox1 kuai">周边游</li>
+			<li class="optionBox1 kuai">酒店</li>
+			<li class="optionBox1 kuai">国内游</li>
+			<li class="optionBox1 kuai">出境游</li>
+		</ul>
+	</body>
+</html>
+<script type="text/javascript">
+	var options = document.getElementsByClassName("options")[0];
+	var span2 = options.getElementsByTagName("div");
+	var newb = document.getElementsByClassName("newb")[0];
+	var optionBox = newb.getElementsByTagName("li");
+//	var topRed = document.getElementsByClassName("topRed")[0];
+	var oDiv = document.getElementsByTagName("div")[0];
+	console.log(oDiv)
+	window.onscroll = function() {
+		console.log(pageYOffset)
+		if(pageYOffset > 300) {
+			oDiv.className = "topRed1";	
+		}else if(pageYOffset <= 280) {
+			oDiv.className = "topRed";	
+		}
+		if(pageYOffset >= 830) {
+			options.style.cssText = "position: fixed;width: 780px;top: 50px;display: flex;flex-shrink: 1;background: white;margin: 0px auto;margin-left:20px;color: black;line-height: 35px;"
+			options.style.borderBottom = "1px solid #F4F4F4";
+		}else{
+			options.style.cssText = "";
+			options.style.borderBottom = "";
+		}
+	}
+	for(var i = 0; i < span2.length; i++) {
+		span2[i].index = i;
+		span2[i].onclick = function() {
+			for(var j = 0; j < span2.length; j++) {
+				console.log(optionBox[j])
+				span2[j].className = "";
+				optionBox[j].className = "optionBox1";
+			}
+			span2[this.index].className = "red";
+			optionBox[this.index].className = "newb1";
+		}
+	}
+ajax("get", "https://www.easy-mock.com/mock/5ba06ec82ee5a7654dc13dd7/example/guessLike", "", function(res) {
+		var films = JSON.parse(res);
+		var item = films.datas;
+		for(var i = 0; i < item.length; i++) {
+			var each = item[i];
+			optionBox[0].innerHTML += `
+				<span class="rd">
+					<div><img src="${each.images}"/></div>
+					<div>${each.name}</div>
+					<div><span>驴悦亲子</span></div>
+					<div><span>￥${each.price}</span><span>起</span><span>${each.commentGood}满意</span></div>
+				</span>
+			`
+		}
+	})
+</script>

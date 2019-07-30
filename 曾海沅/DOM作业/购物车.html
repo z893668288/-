@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+	</head>
+	<style type="text/css">
+		.bigBox{
+			width: 283px;
+			height: 125px;
+			border: 1px solid #C8C8C8;
+			margin: 0 auto;
+		}
+		.choice{
+			display: block;
+			margin-top: 11px;
+		}
+		.reduce{
+			position: relative;
+			display: block;
+			top: -115px;
+			left: 20px;
+			margin-top: 2px;
+		}
+		.num{
+			position: relative;
+			border: 1px solid red;
+			width: 35px;
+			height: 20px;
+			text-align: right;
+			line-height: 20px;
+			top: -346px;
+			left: 40px;
+			margin-top: 2px;
+		}
+		.plus{
+			position: relative;
+			display: block;
+			top: -230px;
+			left: 77px;
+			margin-top: 2px;
+		}
+		#text1{
+			position: relative;
+			display: block;
+			top: -465px;
+			left: 105px;
+			margin-top: 2px;
+		}
+		.total{
+			margin-left: 15px;
+		}
+		.price{
+			margin-left: 20px;
+		}
+		.boxDwon{
+			margin: 0px auto;
+			width: 283px;
+			border: 1px solid #C8C8C8;
+			height: 25px;
+		}
+	</style>
+	<body>
+		<div class="bigBox">
+			<input type="checkbox" name="" class="choice" value="" />
+			<input type="checkbox" name="" class="choice" value="" />
+			<input type="checkbox" name="" class="choice" value="" />
+			<input type="checkbox" name="" class="choice" value="" />
+			<input type="checkbox" name="" class="choice" value="" />
+			<input type="button" value="-" class="reduce" />
+			<input type="button" value="-" class="reduce" />
+			<input type="button" value="-" class="reduce" />
+			<input type="button" value="-" class="reduce" />
+			<input type="button" value="-" class="reduce" />
+			<input type="button" value="+" class="plus" data-ty = "1"/>
+			<input type="button" value="+" class="plus" data-ty = "2"/>
+			<input type="button" value="+" class="plus" data-ty = "3"/>
+			<input type="button" value="+" class="plus" data-ty = "4"/>
+			<input type="button" value="+" class="plus" data-ty = "5"/>
+			<div class="num"></div>
+			<div class="num"></div>
+			<div class="num"></div>
+			<div class="num"></div>
+			<div class="num"></div>
+			<input type="text" id="text1" readonly="readonly"/>
+			<input type="text" id="text1" readonly="readonly"/>
+			<input type="text" id="text1" readonly="readonly"/>
+			<input type="text" id="text1" readonly="readonly"/>
+			<input type="text" id="text1" readonly="readonly" />
+		</div>
+		<div class="boxDwon">
+			<label><input type="checkbox" name="" id="whole" value="" />全选</label>
+			<span class="total">商品总计：</span><span></span>	
+			<span class="price">商品总价：</span><span></span>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var choice = document.getElementsByClassName("choice");
+	var reduce = document.getElementsByClassName("reduce");
+	var plus = document.getElementsByClassName("plus");
+	var whole = document.getElementById("whole");
+	var num = document.getElementsByClassName("num");
+	/*全选或全不选*/
+	whole.onclick = function() {
+		for(var i = 0; i < choice.length; i++) {
+			if(this.checked) {
+				choice[i].checked = true;
+			}else {
+				choice[i].checked = false;
+			}
+		}
+	}
+	var result = 0;
+	for(var i = 0; i < reduce.length; i++) {
+//		reduce[i].index = this.i;
+		reduce[i].onclick = function() {
+			if(result == 0) {
+				 result = 0;
+				console.log("11")
+			}else if(result > 0) {
+				 result--;
+				console.log("22")
+			}
+		}
+	}
+	for(var j = 0; j < plus.length; j++) {
+		plus[j].dataset.ty.onclick = function() {
+			console.log(this)
+			 result++ ;
+		 	for(var k = 0; k < num.length; k++) {
+		 		num[k].innerHTML = result;
+		 	}
+		}
+		 
+	}
+//	for(var k = 0; k < num.length; k++) {
+//		console.log("11");
+//		num[k].innerHTML = result;
+//	}
+	
+</script>

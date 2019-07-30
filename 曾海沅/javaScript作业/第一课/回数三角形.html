@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	var row;
+	for(var i = 1; i <= 5; i++) { 
+		row = "";
+		for(var j = 1; j <= 5 - i; j++) {
+			row += "&nbsp;";
+		}
+		for(var j = 1; j <= i; j++) {
+			row += j;
+		}
+		for(var j = i - 1; j > 0; j--) {
+			row += j;
+		}
+		document.write("<br/>")
+		document.write(row);
+	}
+</script>

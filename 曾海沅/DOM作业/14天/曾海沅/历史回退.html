@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="img/0.png" >
+		
+		<script type="text/javascript">
+			
+			var oimg = document.querySelector("img");
+			var num = window.location.hash? window.location.hash.substring(1):0;	//获取hash
+			oimg.src = "img/"+num+".png";
+			
+			//绑定点击事件
+			oimg.onclick = function(){
+				if(num==3){
+					num = 3;
+					alert("差不多可以了，该停手了！退回去！")
+				}else{
+					num++;
+				}
+				window.location.hash = num;	//设置hash
+				oimg.src = "img/"+num+".png";
+			}
+			
+			//绑定hash值改变事件
+			window.onhashchange = function(){
+				num = window.location.hash? window.location.hash.substring(1):0;	//获取hash
+				oimg.src = "img/"+num+".png";
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>set和get</title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	function Who(address,telephone,hit) {
+		this.address = address;
+		this.telephone = telephone;
+		this.hit = hit;
+		this.getAddress = function() {
+			return this.address;
+		}
+		this.setAddress = function(address) {
+			this.address = address;
+		}
+		this.getTelephone= function() {
+			return this.telephone;
+		}
+		this.setTelephone = function(telephone) {
+			this.telephone = telephone;
+		}
+	}
+	var a1 = new Who("资信达","固定电话多少？",function() {
+		console.log(this.address + ":" +this.telephone);
+	})
+	a1.setAddress("这是哪里？")
+	a1.setTelephone("这是我的固话：1234567")
+	a1.hit();
+</script>

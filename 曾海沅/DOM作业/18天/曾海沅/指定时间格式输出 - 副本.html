@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	var times = new Date();
+	var myyear = times.getFullYear();
+	var mymonth = times.getMonth()+1;
+	var mydate = times.getDate();
+	var myday = times.getDay();
+	var myhours = times.getHours();
+	var mymin = times.getMinutes();
+	var mysecond = times.getSeconds();
+	var week = ["一","二","三","四","五","六","日"];
+	var str = prompt("日期格式");
+	if(str == "") {
+		alert("不能为空");
+	}else{
+		if(str.indexOf("y") != -1){//判断年---------------------------------------------
+			str = str.split(""); // 转成数组
+			if(str[str.indexOf("y")+3] != "y" && str[str.indexOf("y")+2] == "y") { //输入三个y格式错误
+					alert("格式错误");
+			}else if(str[str.indexOf("y")+1] != "y" && str[str.indexOf("y")] == "y"){//输入一个y格式错误
+					alert("格式错误");
+			}else if(str[str.indexOf("y")+3] == "y" && str[str.indexOf("y")+4] != "y"){//输入四个y
+				myyear;
+			}else if(str[str.indexOf("y")+1] = "y" && str[str.indexOf("y")+3] != "y"){//输入二个y
+				myyear = myyear.toString().substring(2);
+				myyear;
+			}
+		}
+		
+		if(str.indexOf("M") != -1) { //判断月----------------------------------------------
+			str = str.split(""); // 转成数组
+			if(str[str.indexOf("M")] == "M" && str[str.indexOf("M")+1] != "M") {
+				mymonth;
+			}else if(str[str.indexOf("M")+1] == "M" && str[str.indexOf("M")+2] != "M") {
+				if(mymonth < 10){
+				mymonth	= "0" + mymonth;
+				}else{
+					mymonth;
+				}
+			}else{
+				alert("格式错误");
+			}
+		}
+		
+		if(str.indexOf("d") != -1) { //判断日----------------------------------------------
+			str = str.split(""); // 转成数组
+			if(str[str.indexOf("d")] == "d" && str[str.indexOf("d")+1] != "d") {
+				alert(mydate);
+			}else if(str[str.indexOf("d")+1] == "d" && str[str.indexOf("d")+2] != "d") {
+				if(mydate < 10){
+					mydate = "0" + mydate;
+				}else{
+					mydate;
+				}
+			}else{
+				alert("格式错误");
+			}
+		}
+		
+		if(str.indexOf("H") != -1) { //判断小时----------------------------------------------
+			str = str.split(""); // 转成数组
+			if(str[str.indexOf("H")] == "H" && str[str.indexOf("H")+1] != "H") {
+				alert(myhours);
+			}else if(str[str.indexOf("H")+1] == "H" && str[str.indexOf("H")+2] != "H") {
+				if(myhours < 10){
+					myhours = "0" + myhours;
+				}else{
+					myhours;
+				}
+			}else{
+				alert("格式错误");
+			}
+		}
+		
+		if(str.indexOf("m") != -1) { //判断分钟----------------------------------------------
+			str = str.split(""); // 转成数组
+			if(str[str.indexOf("m")] == "m" && str[str.indexOf("m")+1] != "m") {
+				alert(mymin);
+			}else if(str[str.indexOf("m")+1] == "m" && str[str.indexOf("m")+2] != "m") {
+				if(mymin < 10){
+					mymin = "0" + mymin;
+				}else{
+					mymin;
+				}
+			}else{
+				alert("格式错误");
+			}
+		}
+		if(str.indexOf("s") != -1) { //判断秒----------------------------------------------
+			str = str.split(""); // 转成数组
+			if(str[str.indexOf("s")] == "s" && str[str.indexOf("s")+1] != "s") {
+				alert(mysecond);
+			}else if(str[str.indexOf("s")+1] == "s" && str[str.indexOf("s")+2] != "s") {
+				if(mysecond < 10){
+					mysecond = "0" + mysecond;
+				}else{
+					mysecond;
+				}
+			}else{
+				alert("格式错误");
+			}
+		}
+		
+		if(str.indexOf("w") != -1) { //判断星期----------------------------------------------
+			str = str.split(""); // 转成数组
+		
+			if(str[str.indexOf("w")] == "w") {
+				week = week[myday-1];
+			}else{
+				alert("格式错误");
+			}
+		}else if(str.indexOf("W") != -1){
+			alert("格式错误");
+		}
+		
+		//在没输入星期数的时候的补救
+		if(str.indexOf("w") == -1){
+			var result = `${myyear}-${mymonth}-${mydate} ${myhours}:${mymin}:${mysecond} 星期${week[myday-1]}`
+		alert(result);
+		}else{
+				var result = `${myyear}-${mymonth}-${mydate} ${myhours}:${mymin}:${mysecond} 星期${week}`
+		alert(result);
+		}
+	}
+	
+		// 设置必须每个值都输入才能显示时间
+//		if(str.indexOf("M") != -1 && str.indexOf("y") != -1 && str.indexOf("d") != -1 && str.indexOf("H") != -1 && str.indexOf("m") != -1 && str.indexOf("s") != -1 && str.indexOf("w") != -1){
+//			var result = `${myyear}-${mymonth}-${mydate} ${myhours}:${mymin}:${mysecond} 星期${week[myday-1]}`
+//			alert(result);
+//		}else{
+//			alert("格式错误")
+//		}
+	
+	
+	
+</script>

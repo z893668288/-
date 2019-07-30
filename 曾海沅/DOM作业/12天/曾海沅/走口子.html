@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>走口子</title>
+	</head>
+	<style type="text/css">
+		body{
+			display: flex;
+			justify-content: center;
+		}
+		canvas{
+			background: #EEEEEE;
+		}
+	</style>
+	<body>
+		<canvas width="500" height="500"></canvas>
+	</body>
+</html>
+<script type="text/javascript">
+	var mycanvas = document.querySelector("canvas");
+	var ctx = mycanvas.getContext("2d");
+	var numx = 0;
+	var numy = 0;
+	var times = setInterval(function() {
+//		clearInterval(times);
+		ctx.fillRect(numx,numy,100,100);
+		if(numx < mycanvas.offsetWidth-100 && numy ==0) { //向左运动
+			numx += 10;
+			numy = 0;
+		}else if(numy < mycanvas.offsetHeight-100 && numx > 0){//向下运动
+			numx = mycanvas.offsetWidth-100;
+			numy += 10;
+//			console.log(numy)
+		}else if(numx >0 && numy == mycanvas.offsetHeight-100){//向下左运动
+			numx -= 10
+		}else if(numy >0){ //向上运动
+			numy -= 10;	
+		}
+		ctx.clearRect(0,0,mycanvas.offsetWidth,mycanvas.offsetHeight);
+		ctx.fillRect(numx,numy,100,100);
+	},50)
+//	console.log(1)
+</script>

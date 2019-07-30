@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.box {
+			margin: 0 auto;
+			width: 840px;
+			height: 200px;
+		}
+		.column {
+			float: left;
+			width: 58px;
+			height: 200px;
+			border-top: 1px solid lightgray;
+			border-left: 1px solid lightgray;
+			border-bottom: 1px solid lightgray;
+		}
+		.column:nth-of-type(14) {
+			border-right: 1px solid lightgray;
+		}
+		.black1 {
+			width: 59px;
+			height: 100px;
+			background-color: black;
+		}
+		.black2 {
+			width: 58px;
+			height: 50px;
+			background-color: black;
+		}
+		.column:active{
+			background: #F65D07;
+		}
+	</style>
+	<body>
+		<audio>
+			
+		</audio>
+		<div class="box">
+			<div class="column">
+				<div class="black1"></div>
+			</div>
+			<div class="column">
+				<div class="black2"></div>
+			</div>
+			<div class="column">
+				<div class="black1"></div>
+			</div>
+			<div class="column">
+				<div class="black2"></div>
+			</div>
+			<div class="column">
+				<div class="black1"></div>
+			</div>
+			<div class="column">
+				<div class="black2"></div>
+			</div>
+			<div class="column">
+				<div class="black1"></div>
+			</div>
+			<div class="column">
+				<div class="black2"></div>
+			</div>
+			<div class="column">
+				<div class="black1"></div>
+			</div>
+			<div class="column">
+				<div class="black2"></div>
+			</div>
+			<div class="column">
+				<div class="black1"></div>
+			</div>
+			<div class="column">
+				<div class="black2"></div>
+			</div>
+			<div class="column">
+				<div class="black1"></div>
+			</div>
+			<div class="column">
+				<div class="black2"></div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var aud = document.querySelector("audio");
+	var oDiv = document.querySelectorAll(".column");
+	for(var i = 0; i < oDiv.length; i++) {
+		oDiv[i].index = i;
+		oDiv[i].onclick = function() {
+			aud.src = "av/"+ (this.index + 1) +".mp3";
+			aud.play();
+		}
+		
+		document.onkeydown = function(ev) {
+			var ev = ev || window.event;
+			
+			if(ev.keyCode == 49) {
+				aud.src = "av/1.mp3";
+				aud.play();
+			}else if(ev.keyCode == 50) {
+				aud.src = "av/2.mp3";
+				aud.play();
+			}else if(ev.keyCode == 51) {
+				aud.src = "av/3.mp3";
+				aud.play();
+			}else if(ev.keyCode == 52) {
+				aud.src = "av/4.mp3";
+				aud.play();
+			}else if(ev.keyCode == 53) {
+				aud.src = "av/5.mp3";
+				aud.play();
+			}else if(ev.keyCode == 54) {
+				aud.src = "av/6.mp3";
+				aud.play();
+			}else if(ev.keyCode == 55) {
+				aud.src = "av/7.mp3";
+				aud.play();
+			}else if(ev.keyCode == 56) {
+				aud.src = "av/8.mp3";
+				aud.play();
+			}else if(ev.keyCode == 57) {
+				aud.src = "av/9.mp3";
+				aud.play();
+			}else if(ev.keyCode == 48) {
+				aud.src = "av/10.mp3";
+				aud.play();
+			}
+		}
+	}
+</script>

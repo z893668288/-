@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>天体环绕</title>
+	</head>
+	<style type="text/css">
+		body{
+			background: url(img/月读.jpg);
+		}
+		div{
+			border-radius:50% ;
+			margin: 25px auto;
+		}
+		.box1{
+			position: relative;
+			width: 200px;
+			height: 200px;
+			border: 1px solid white;
+			/*background-image: url(img/写轮眼.jpg);*/
+			/*background-position: -50px -8px;
+			background-size: 300px;
+			background-repeat: no-repeat;*/
+		}
+		.img1{
+			position: absolute;
+			width: 400px;
+			left: 597px;
+			top: -23px;
+		}
+		.box2{
+			width: 150px;
+			height: 150px;
+			border: 1px solid white;
+		}
+		.box3{
+			width: 100px;
+			height: 100px;
+			border: 1px solid white;
+		}
+		/*.box4{*/
+			/*position: absolute;
+			top: 10px;*/
+			/*width: 30px;
+			height: 30px;
+			background: rgba(0,0,0,1);*/
+			/*animation: 2s pp linear infinite;
+			transform-origin: 10px bottom;*/
+		/*}*/
+		/*@keyframes pp{
+			from{transform: rotate(0deg);}
+			to{transform: rotate(720deg)}
+		}*/
+		.box5{
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			top: 47px;
+			background: orange;
+			animation: 5s aa linear infinite;
+			transform-origin: 50px 29px;
+		}
+		@keyframes aa{
+			from{transform: rotate(0deg);}
+			to{transform: rotate(720deg)}
+		}
+		.box6{
+			position: absolute;
+			top: 12px;
+			width: 10px;
+			height: 10px;
+			background: red;
+			animation: 7s bb linear infinite;
+			transform-origin: 51px 63px;
+		}
+		@keyframes bb{
+			from{transform: rotate(0deg);}
+			to{transform: rotate(720deg)}
+		}
+		.box7{
+			position: absolute;
+			top: -19px;
+			width: 10px;
+			height: 10px;
+			background: deepskyblue;
+			animation: 8s cc linear infinite;
+			transform-origin: 52px 93px;
+		}
+		@keyframes cc{
+			from{transform: rotate(0deg);}
+			to{transform: rotate(720deg)}
+		}
+		
+	</style>
+	<body>
+		<img src="img/写轮眼.jpg" class="img1"/>
+		<div class="box1">
+			<div class="box2">
+				<div class="box3">
+					<div class="box4"></div>
+					<div class="box5"></div>
+					<div class="box6"></div>
+					<div class="box7"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

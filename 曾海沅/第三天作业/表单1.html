@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单1</title>
+		<style type="text/css">
+			table{
+				margin: auto;
+			}
+			a{
+				text-decoration: none;
+				color: #1E50A2;
+			}
+			.d1{
+				width: 300px;
+				height:30px;
+			}
+			tr{
+				height: 35px;
+			}
+			.d3{
+				width: 130px;
+				height: 40px;
+				background-color: #3486C5; 
+				border-radius: 5px; 
+				border: none;
+				margin-left: 40px;
+				margin-top: 10px;
+				font-weight: bold;
+				color: #FFFFFF;
+				font-size: 16px;
+			}
+			.d4{
+				width: 180px;
+				height: 30px;
+			}
+			img{
+				height: 35px;
+				vertical-align: bottom;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<form action="" method="post">
+			<table  cellspacing="0" cellpadding="0">
+				<tr>
+					<th style="text-align: right;"><spen style="color:red">*</spen>常用邮箱地址：</th>
+					<th style="text-align: left;"><input type="text" value="" class="d1"/></th>
+				</tr>
+				<tr>
+					<td></td>
+					<td style="text-align: left;font-size: 13px;color: #8A8A8A;">支持你的常用邮箱，如name@example.com</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td align="left"><a href="#">还没有邮箱？立即注册网易邮箱>></a></td>
+				</tr>
+				<tr>
+					<th style="text-align: right;"><spen style="color:red">*</spen>设置密码：</th>
+					<th style="text-align: left;"><input type="password" value="" class="d1"/></th>
+				</tr>
+				<tr>
+					<td></td>
+					<td style="text-align: left;font-size: 13px;color: #8A8A8A;">6到16个字符，区分大小写。</td>
+				</tr>
+				<tr>
+					<th style="text-align: right;"><spen style="color:red">*</spen>确认密码：</th>
+					<th style="text-align: left;"><input type="password" value="" class="d1"/></th>
+				</tr>
+				<tr>
+					<td></td>
+					<td style="text-align: left;font-size: 13px;color: #8A8A8A;">再次输入你设置的密码。</td>
+				</tr>
+				<tr>
+					<th style="text-align: right;"><spen style="color:red">*</spen>密保密码：</th>
+					<th style="text-align: left;">
+						<select name="pass" class="d1">
+							<option value="">请选择..</option>
+							<option value="">父亲姓名</option>
+							<option value="">母亲姓名</option>
+							<option value="">配偶姓名</option>
+						</select>
+					</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td style="text-align: left;font-size: 13px;color: #8A8A8A;">密码保护问题用于帮助你找回登录密码。</td>
+				</tr>
+				<tr>
+					<th style="text-align: right;"><spen style="color:red">*</spen>你的答案：</th>
+					<th style="text-align: left;"><input type="text" value="" class="d1"/></th>
+				</tr>
+				<tr>
+					<td></td>
+					<td style="text-align: left;font-size: 13px;color: #8A8A8A;">4到30个字符，区分大小写，一个汉字占两个字符。</td>
+				</tr>
+				<tr>
+					<th style="text-align: right;"><spen style="color:red">*</spen>验证码：</th>
+					<th style="text-align: left;"><input type="text" value="" class="d4"/><img src="../img/验证码.PNG"/></th>
+				</tr>
+				<tr>
+					<td></td>
+					<td style="text-align: left;font-size: 13px;color: #8A8A8A;">不区分大小写。看不清可以<a href="#">换一个</a></td>
+				</tr>
+				<tr>
+					<td></td>
+					<th align="left"><input type="radio" value="" name="a" checked="" class="d2"/>我同意<a href="#">"服务条款"</a>和<a href="#">"隐私权保护和个人信息利用政策"</a></th>
+				</tr>
+				<tr>
+					<td></td>
+					<th align="left"><input type="submit" value="立即注册" name="register" class="d3"/></th>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

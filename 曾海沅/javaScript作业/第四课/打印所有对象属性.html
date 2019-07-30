@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>打印对象所有属性</title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+			
+			var add = {};
+			add.name = "秦小姐";
+			add.age = 19;
+			add.interest = function() {
+			console.log(add.name + "今年：" + add.age + "喜欢帅气阳光的男生")
+			}
+		for(var i in add ){
+			console.log(add[i]);
+		}
+</script>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>贪吃蛇</title>
+	</head>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+			position: absolute;
+		}
+	</style>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>
+<script type="text/javascript">
+	var div = document.getElementsByTagName("div")[0];
+	var div1 = document.createElement("div");
+	div1.style.width = "100px";
+	div1.style.height = "100px"
+	div1.style.border = "1px solid red";
+	div1.style.position = "absolute";
+	document.body.appendChild(div1);
+	
+	document.onkeydown = function(ev) {
+		var ev = ev || window.event;
+		
+			if(ev.keyCode == 39) {//向右按键
+				var times1 = setInterval(function() {
+			//向右边运动-----------------------------------------------------------------------------
+				div.style.left = ++div.getBoundingClientRect().left + "px" ;
+				var divLeft  = div.getBoundingClientRect().left-div1.offsetWidth;
+				div1.style.left = divLeft + "px";
+				},100);	
+				
+			}else {
+				clearInterval(times1);
+			}
+			if(ev.keyCode == 40) {//向下按键
+				
+				var times2 = setInterval(function() {
+			//向下运动----------------------------------------------------------------------------
+				div.style.top = ++div.getBoundingClientRect().top + "px" ;
+				var divTop  = div.getBoundingClientRect().top-div1.offsetWidth;
+				div1.style.top = divTop + "px";
+				},100);
+				
+			}else {
+				clearInterval(times2);
+			}
+	}
+</script>

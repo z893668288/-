@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单2</title>
+		<style type="text/css">
+			table{
+				margin: auto;
+			}
+			tr{
+				height: 40px;
+				color: #757575;
+			}
+			.d1{
+				width: 80px;
+				height: 40px;
+				background-color: green;
+				color: #FFFFFF;
+				border-radius: 5px;
+				border: none;
+				margin-left: 70px;
+			}
+			.d2{
+				width: 250px;
+				height:25px;
+			}
+			.d3{
+				width: 70px;
+				height: 22px;
+				color: #757575;
+			}
+			.d4{
+				border: none;
+				color: #2895D3;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="" method="post">
+			<table  cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="right"><span style="color: red;">*</span>昵称：</td>
+					<td><input type="text" value="" name="" class="d2" style="background-color: #F4FFD4;"/></td>
+					<td style="font-size: 14px;background-color: #F1FFD4;">4-20个字符，支持中英文、数字、"_"或减号</td>
+				<tr>
+					<td align="right">真实姓名：</td>
+					<td><input type="text" value="" name="" class="d2"  /></td>
+					<td>
+						<select name="" class="d4">
+							<option value="">所有人可见</option>
+							<option value="">朋友可见</option>
+							<option value="">都不可见</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="right"><span style="color: red;">*</span>所在地：</td>
+					<td>
+						<select name="" class="d3">
+							<option value="">北京</option>
+							<option value="">深圳</option>
+							<option value="">上海</option>
+						</select>
+						<select name="" class="d3">
+							<option value="">朝阳区</option>
+							<option value="">福田区</option>
+							<option value="">浦东区</option>
+						</select>
+					</td>			
+				</tr>
+				<tr>
+					<td align="right"><span style="color: red;">*</span>性别：</td>
+					<td><label><input type="radio" value="" name="sex"/ checked="">男</label>
+						<label><input type="radio" value="" name="sex"/>女</label>
+					</td>
+				</tr>
+				<tr>
+					<td align="right">生日：</td>
+					<td>
+						<select name="birthDay" class="d3">
+							<option value="year">2019</option>
+						</select>
+						<span>年</span>
+						<select name="birthDay" class="d3">
+							<option value="month">5</option>
+						</select>
+						<span>月</span>
+						<select name="birthDay" class="d3">
+							<option value="day">17</option>
+						</select>
+						<span>日</span>
+					</td>
+					<td>
+						<select name="secRecy" class="d4">
+							<option value="">保密</option>
+							<option value="">公开</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="right">博客地址：</td>
+					<td><input type="text" value="" name="" class="d2"></td>
+					<td>
+						<select name="secRecy" class="d4">
+							<option value="">所有人可见</option>
+							<option value="">所有人不可见</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="right">博客地址：</td>
+					<td>mofeiangmotao@sina.com<a href="#" style="text-decoration: none;">修改</a></td>
+					<td>
+						<select name="secRecy" class="d4">
+							<option value="">我关注的人可见</option>
+							<option value="">都不可见</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="right">QQ：</td>
+					<td><input type="text" value="" name="" class="d2"></td>
+					<td>
+						<select name="secRecy" class="d4">
+							<option value="">我关注的人可见</option>
+							<option value="">都不可见</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="right">MSN：</td>
+					<td><input type="text" value="" name="" class="d2"></td>
+					<td>
+						<select name="secRecy" class="d4">
+							<option value="">我关注的人可见</option>
+							<option value="">都不可见</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="right">一句话介绍：</td>
+					<td><textarea style="width: 250px;height: 50px;"></textarea></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><hr style="border: 1px dashed #C5C5C5;"/></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>以下信息，可作为通过客服取回账号的依据</td>
+				</tr>
+				<tr>
+					<td align="right">证件类型：</td>
+					<td>
+						<select name="type" class="d4" style="color: #757575;">
+							<option value="">身份证</option>
+							<option value="">户口簿</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="right">证件号码：</td>
+					<td><input type="text" value="" name="" class="d2" "></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="保存" name="" class="d1"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
